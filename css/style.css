@@ -12,7 +12,8 @@
    box-sizing: border-box;
    margin: 0;
    padding: 0;
- } 
+ }
+
  html {
    scroll-behavior: smooth;
  }
@@ -33,10 +34,10 @@
  h6 {
    font-family: 'Fraunces', serif;
    font-weight: 600;
-   font-style: normal; 
+   font-style: normal;
    letter-spacing: 0em;
    color: var(--green);
-       line-height: 1.1em;
+   line-height: 1.1em;
  }
 
  p {
@@ -100,11 +101,13 @@
    height: 2px;
    background: currentColor;
  }
-section.intolerable .container {
-    width: 1200px;
-}
+
+ section.intolerable .container {
+   width: 1200px;
+ }
+
  section {
-   padding: 86px 0
+   padding: 60px 0
  }
 
  .section.bg {
@@ -114,11 +117,13 @@ section.intolerable .container {
  .section.cream {
    background: var(--cream);
  }
-.heading {
-    position: relative;
-    font-size: 45px;
-    margin-bottom: 8px;
-}
+
+ .heading {
+   position: relative;
+   font-size: 45px;
+   margin-bottom: 8px;
+ }
+
  .lines {
    position: relative;
  }
@@ -185,13 +190,13 @@ section.intolerable .container {
    color: var(--gry);
  }
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 999999;
-    background-color: var(--white);
-    box-shadow: 0 3px 15px rgba(0, 0, 0, .07);
-}
+ header {
+   position: sticky;
+   top: 0;
+   z-index: 999999;
+   background-color: var(--white);
+   box-shadow: 0 3px 15px rgba(0, 0, 0, .07);
+ }
 
  .nav {
    height: 78px;
@@ -532,18 +537,24 @@ header {
    min-height: 350px;
  }
 
- .center-head {
-   text-align: left;
+ .dark-section .container.center-head {
+   position: relative;
+   z-index: 2;
  }
- 
 
-.symptoms {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 18px;
-    margin-top: 38px;
-    margin-bottom: 50px;
-}
+ .dark-section .container.center-head p {
+   color: var(--white);
+   text-align: center;
+ }
+
+ .symptoms {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 18px;
+   margin-top: 38px;
+   margin-bottom: 50px;
+ }
+
  .symptom {
    background: var(--white);
    border: 1px solid #e0ebe6;
@@ -572,27 +583,28 @@ header {
    text-align: center;
    margin-top: 28px;
  }
-.risk {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    align-items: self-start;
-    gap: 1px;
-    margin-top: 40px;
-}
+
+ .risk {
+   display: grid;
+   grid-template-columns: 1fr 400px;
+   align-items: self-start;
+   gap: 1px;
+   margin-top: 40px;
+ }
 
  .risk-list {
    display: grid;
    gap: 10px;
  }
 
-.risk-list div {
-    background: var(--bg);
-    border: 1px solid #dae8e2;
-    padding: 3px 15px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 13px;
-}
+ .risk-list div {
+   background: var(--bg);
+   border: 1px solid #dae8e2;
+   padding: 3px 15px;
+   border-radius: 8px;
+   font-weight: 600;
+   font-size: 13px;
+ }
 
  .risk-list div:before {
    content: "•";
@@ -609,6 +621,7 @@ header {
    max-width: 900px;
    margin: 0 auto;
    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   margin-top: 35px;
  }
 
  .form-grid {
@@ -672,18 +685,18 @@ header {
    cursor: pointer;
  }
 
-.btn-primary {
-    background-color: var(--green);
-    color: var(--white);
-    border: none;
-    padding: 13px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 8px; 
-    transition: 0.7s;
-}
+ .btn-primary {
+   background-color: var(--green);
+   color: var(--white);
+   border: none;
+   padding: 13px 20px;
+   font-size: 16px;
+   font-weight: 600;
+   border-radius: 8px;
+   transition: 0.7s;
+ }
 
- 
+
  .confidential-text {
    text-align: center;
    font-size: 12px;
@@ -764,9 +777,11 @@ header {
  .hospital-section h2.heading {
    color: var(--white);
  }
-h2.heading.canter {
-    text-align: center;
-}
+
+ h2.heading.canter {
+   text-align: center;
+ }
+
  .section.hospital-section h2::after {
    content: "";
    position: absolute;
@@ -912,14 +927,11 @@ h2.heading.canter {
    background-size: 130%;
    background-position: -200px 0px;
    background-repeat: no-repeat;
+   z-index: 0;
  }
 
  .dark-section .heading {
    color: var(--white);
- }
-
- .dark-section .section-lead {
-   color: #d4e6e0;
  }
 
  .inline-form {
@@ -1572,11 +1584,11 @@ h2.heading.canter {
    margin: 10px 0;
  }
 
- .socials a { 
-   width: 35px; 
+ .socials a {
+   width: 35px;
  }
 
-  
+
 
  .copyright {
    border-top: 1px solid rgba(255, 255, 255, 0.22);
@@ -1595,103 +1607,107 @@ h2.heading.canter {
  /* ===================================================
    FLOATING WHATSAPP BUTTON (Sirf Mobile ke liye)
 =================================================== */
-.whatsapp-float {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    background-color: #25D366;
-    color: #FFF;
-    border-radius: 50px;
-    padding: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-    display: none; /* Desktop par hide rahega */
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s;
-}
+ .whatsapp-float {
+   position: fixed;
+   bottom: 90px;
+   right: 20px;
+   background-color: #25D366;
+   color: #FFF;
+   border-radius: 50px;
+   padding: 12px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   z-index: 999;
+   display: none;
+   /* Desktop par hide rahega */
+   align-items: center;
+   justify-content: center;
+   transition: transform 0.2s;
+ }
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
-}
+ .whatsapp-float:hover {
+   transform: scale(1.1);
+ }
 
-.whatsapp-float img {
-    width: 32px;
-    height: 32px;
-    display: block;
-}
+ .whatsapp-float img {
+   width: 32px;
+   height: 32px;
+   display: block;
+ }
 
-/* ===================================================
+ /* ===================================================
    STICKY BOTTOM ACTION BAR (Sirf Mobile ke liye)
 =================================================== */
-.sticky-action-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 12px 16px;
-    border-top: 1px solid #d5e2dc;
-    display: none; /* Desktop par hide rahega */
-}
+ .sticky-action-bar {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   background-color: #ffffff;
+   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+   z-index: 1000;
+   padding: 12px 16px;
+   border-top: 1px solid #d5e2dc;
+   display: none;
+   /* Desktop par hide rahega */
+ }
 
-.sticky-container {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    gap: 12px;
-}
+ .sticky-container {
+   max-width: 600px;
+   margin: 0 auto;
+   display: flex;
+   gap: 12px;
+ }
 
-.sticky-btn {
-    flex: 1;
-    padding: 14px 20px;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 15px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: background 0.2s;
-}
+ .sticky-btn {
+   flex: 1;
+   padding: 14px 20px;
+   border-radius: 8px;
+   text-align: center;
+   text-decoration: none;
+   font-weight: 700;
+   font-size: 15px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   transition: background 0.2s;
+ }
 
-.call-btn-action {
-    background-color: #ffffff;
-    color: #005a43;
-    border: 2px solid #005a43;
-}
+ .call-btn-action {
+   background-color: #ffffff;
+   color: #005a43;
+   border: 2px solid #005a43;
+ }
 
-.call-btn-action:hover {
-    background-color: #EAF4F0;
-}
+ .call-btn-action:hover {
+   background-color: #EAF4F0;
+ }
 
-.book-btn-action {
-    background-color: #005a43;
-    color: #ffffff;
-    border: 2px solid #005a43;
-}
+ .book-btn-action {
+   background-color: #005a43;
+   color: #ffffff;
+   border: 2px solid #005a43;
+ }
 
-.book-btn-action:hover {
-    background-color: #004231;
-}
+ .book-btn-action:hover {
+   background-color: #004231;
+ }
 
 
-/* ===================================================
+ /* ===================================================
    MEDIA QUERY: Sirf Mobile Screen (768px ya usse kam) par dikhega
 =================================================== */
-@media (max-width: 768px) {
-    .whatsapp-float {
-        display: flex; /* Mobile me dikhega */
-    }
+ @media (max-width: 768px) {
+   .whatsapp-float {
+     display: flex;
+     /* Mobile me dikhega */
+   }
 
-    .sticky-action-bar {
-        display: block; /* Mobile me dikhega */
-    }
-}
+   .sticky-action-bar {
+     display: block;
+     /* Mobile me dikhega */
+   }
+ }
 
  @media(max-width:1050px) {
    .hero-wrap {
