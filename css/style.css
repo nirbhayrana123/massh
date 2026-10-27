@@ -1479,6 +1479,19 @@ section.symptoms-section {
    color: #fff;
    font-size: 12px;
  }
+
+.footer-links {
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+        width: 350px;
+        margin: 0 auto;
+}
+.footer-links a  {
+    padding-left: 20px;
+    font-size: 14px;
+}
  
  footer::before {
    content: "";
