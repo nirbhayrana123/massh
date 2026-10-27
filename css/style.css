@@ -80,9 +80,10 @@
  }
 
  .container {
-   width: 1380px;
-   margin: 0 auto;
- }
+    max-width: 1380px;
+    width: 100%;
+    margin: 0 auto; 
+}
 
  .eyebrow {
    display: inline-flex;
@@ -101,9 +102,7 @@
    background: currentColor;
  }
 
- section.intolerable .container {
-   width: 1200px;
- }
+ 
 
  section {
    padding: 60px 0
@@ -1828,14 +1827,25 @@
 =================================================== */
  @media (max-width: 768px) {
    .whatsapp-float {
-     display: flex;
-     /* Mobile me dikhega */
+     display: flex; 
    }
 
    .sticky-action-bar {
-     display: block;
-     /* Mobile me dikhega */
+     display: block; 
    }
+
+   .features-container {
+    flex-wrap: wrap;
+}
+.lines::after, .heading::after {
+    content: ""; 
+    right: -10px; 
+}
+.sticky-btn {
+    flex: 1;
+    padding: 14px 10px; 
+}
+
  }
 
  @media(max-width:1050px) {
@@ -1883,9 +1893,7 @@
  }
 
  @media(max-width:720px) {
-   .container {
-     width: min(100% - 30px, 560px);
-   }
+    
 
    .section {
      padding: 58px 0;
