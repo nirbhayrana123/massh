@@ -482,6 +482,7 @@ p.routine {
    width: 2px;
    height: 90px;
    left: -1px;
+   top: 10px;
  }
 
   span.icon img {
@@ -616,8 +617,8 @@ section.intolerable {
  }
 
  .booking-form {
-   background: var(--white);
-   padding: 30px;
+   background: rgba(253, 248, 244, 1); 
+   padding: 20px;
    border-radius: 20px;
    max-width: 900px;
    margin: 0 auto;
@@ -631,12 +632,15 @@ section.intolerable {
    gap: 10px;
    margin-bottom: 20px;
  }
+ .otp-section label {
+    color: rgba(54, 54, 54, 1);
+}
 
  .BookNowotp {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
  .field {
@@ -652,20 +656,23 @@ section.intolerable {
    margin-bottom: 6px;
  }
 
- .field input,
- .field select {
-   padding: 12px 15px;
-   border: 1px solid #e0e0e0;
-   border-radius: 8px;
-   outline: none;
-   font-size: 14px;
-   background: var(--white);
- }
+ .field input, .field select {
+    padding: 12px 15px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: var(--white);
+    border: 1px solid rgba(22, 135, 114, 0.13);
+}
 
  .otp-section {
-   width: 350px;
+   width: 270px;
    margin: 15px auto;
+   text-align: left;
  }
+ p.confidential-text {
+    color: #000000 !important;
+}
 
  .otp-wrapper {
    display: flex;
@@ -679,14 +686,14 @@ section.intolerable {
    gap: 10px;
  }
 
- .otp-inputs input {
-   width: 45px;
-   height: 45px;
-   text-align: center;
-   font-size: 16px;
-   border: 1px solid #e0e0e0;
-   border-radius: 8px;
- }
+.otp-inputs input {
+    width: 34px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(22, 135, 114, 0.13);
+}
 
  .resend-otp {
    color: #888;
@@ -702,7 +709,7 @@ section.intolerable {
    font-size: 16px;
    font-weight: 600;
    border-radius: 8px;
-   transition: 0.7s;
+   transition: 0.7s; 
  }
 
 
@@ -718,7 +725,7 @@ section.intolerable {
    align-items: center;
    justify-content: space-around;
    background-color: var(--white);
-   padding: 30px 20px;
+   padding: 20px 20px;
    border-radius: 12px;
    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
    max-width: 1200px;
@@ -740,8 +747,7 @@ section.intolerable {
    height: 48px;
    display: flex;
    align-items: center;
-   justify-content: center;
-   margin-bottom: 12px;
+   justify-content: center; 
  }
 
  .feature-item .icon img {
@@ -752,7 +758,7 @@ section.intolerable {
 
  .feature-item p {
    margin: 0;
-   font-size: 15px;
+   font-size: 20px;
    font-weight: 600;
    color: var(--black);
    line-height: 1.3;
