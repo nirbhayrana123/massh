@@ -44,7 +44,8 @@
  }
 
  p {
-   color: var(--black);
+   color:  rgba(102, 102, 102, 1);
+;
    font-size: 16px;
    font-family: 'DM Sans', sans-serif;
 
@@ -388,13 +389,16 @@
    margin-top: -55px;
  }
 
- .location {
-   margin-bottom: 10px;
-   border-radius: 999px;
-   font-size: 12px;
-   font-weight: 500;
-   position: relative;
- }
+.location  {
+    margin-bottom: 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
  .locations span.location {
    border: 1px solid var(--white);
@@ -1391,16 +1395,19 @@
  }
 
  .doctor .stats b {
-   display: block;
-   font-size: 18px;
-   color: var(--green);
- }
+    display: block;
+    font-family: DM Sans;
+    font-weight: 600;
+    font-size: 18px;
+    vertical-align: bottom;
+    color: rgba(56, 56, 56, 1);
+}
 
  .doctor p {
-   font-size: 13px;
-   color: var(--black);
-   margin-bottom: 0px;
- }
+    font-size: 14px;
+    color: var(--black);
+    margin-bottom: 0px;
+}
 
  .doctor p.description {
    min-height: 70px;
@@ -2148,9 +2155,10 @@
      font-size: 17px;
    }
 
-   .advisor h2 {
-     font-size: 30px;
-   }
+      .advisor h2 {
+        font-size: 24px;
+        font-weight: 400;
+    }
 
    section.section.cta form.inline-form {
      width: 100%;
@@ -2495,6 +2503,11 @@
    .flexx {
      width: 100%;
    }
+   .hospital img.direction {
+    width: 40px; 
+    margin-top: 18px;
+    left: 160px;
+}
 
    .insurance h3 {
      font-size: 18px;
@@ -2516,7 +2529,9 @@
    .container {
      padding: 0 5%;
    }
-
+.doctor .stats { 
+    flex-wrap: wrap;
+}
    a.mainlogo {
      width: 190px;
    }
@@ -2567,9 +2582,9 @@
      width: 100%;
    }
 
-   a.btn-primary.gold {
-     width: 100%;
-   }
+      a.btn-primary.gold {
+        width: 50%;
+    }
 
    .insurance img {
      width: 80px;
@@ -2582,8 +2597,8 @@
    }
 
    .hospital img {
-     height: 280px;
-   }
+        height: 200px;
+    }
 
    .hospital-meta {
      justify-content: space-between;
