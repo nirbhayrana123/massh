@@ -2378,10 +2378,11 @@
    .form-card {
      padding: 21px;
    }
-    .features-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0px;
-    }
+
+   .features-container {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 0px;
+   }
 
    .intro,
    .risk {
@@ -2501,14 +2502,19 @@
      font-size: 18px;
      margin-bottom: 10px;
    }
-.insurance p {
-    font-size: 14px;
-}
+
+   .insurance p {
+     font-size: 14px;
+   }
+
    ul li.bb-n {
      border: none;
    }
 
-
+   ul.point2::after,
+   ul.point2::before {
+     display: none;
+   }
  }
 
 
@@ -2600,7 +2606,7 @@
 
    .videobox {
      height: 260px;
-     ;
+
    }
 
    .review-badge {
@@ -2636,9 +2642,70 @@
      padding: 40px 0;
    }
 
-    .heading {
-        font-size: 23px;
+   .heading {
+     font-size: 23px;
+   }
+
+   a.mainlogo {
+     width: 120px;
+   }
+
+   .form-card h3 {
+     font-size: 20px;
+   }
+
+   section.hero .form-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 10px;
+   }
+
+   section.hero .form-grid>*:nth-child(3),
+   section.hero .form-grid>*:nth-child(4) {
+     grid-column: 1 / -1;
+   }
+
+   .symptoms {
+     margin-bottom: 35px;
+   }
+
+   section.symptoms-section {
+     padding: 40px 0;
+   }
+
+   .risk-list div {
+     padding: 3px 10px;
+   }
+
+   section {
+     padding: 40px 0;
+   }
+
+   .surgery-compare .sc-title {
+     font-size: 18px;
+   }
+
+   .mini-checks {
+     padding: 15px;
+   }
+
+.advisor h2 {
+        font-size: 25px;
     }
+
+
+
+ }
+
+ @media (max-width: 375px) {
+
+   .form-card {
+     padding: 15px;
+   }
+
+.mini-checks li { 
+    font-size: 14px;
+}
 
 
 
