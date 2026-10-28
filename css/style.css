@@ -136,12 +136,14 @@
    right: -60px;
    top: -22px;
    width: 170px;
+   pointer-events: none;
  }
 
-.heading-lines.left img {
-    right: auto;
-    left: -55px;
-}
+ .heading-lines.left img {
+   right: auto;
+   left: -55px;
+ }
+
  a.btn-primary.gold {
    background-color: rgba(255, 167, 0, 1);
    color: #000;
@@ -716,7 +718,6 @@
    padding: 0 10px;
  }
 
-
  .feature-item .icon {
    width: 48px;
    height: 48px;
@@ -764,8 +765,6 @@
    text-align: center;
  }
 
- 
-
  .hospital .place::after {
    content: "";
    position: absolute;
@@ -805,7 +804,6 @@
    height: 20px;
  }
 
-
  .hospital-meta .rating {
    display: block;
    padding: 0;
@@ -839,42 +837,6 @@
    background-color: var(--bg);
    padding: 60px 0;
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  @media (max-width: 768px) {
    .form-grid {
@@ -1429,31 +1391,41 @@
    margin: 35px 0 45px;
  }
 
- .video {
-   height: 230px;
-   border-radius: 12px;
-   position: relative;
-   overflow: hidden;
-   background-size: cover;
-   background-position: center;
- }
+.videobox {
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-color: #000000;
+}
+.videobox img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 70%; 
+}
 
- .video:after {
-   content: "▶";
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   width: 50px;
-   height: 50px;
-   border: 1px solid var(--white);
-   border-radius: 50%;
-   display: grid;
-   place-items: center;
-   color: var(--white);
-   background: rgba(0, 0, 0, .28);
-   font-size: 20px
- }
+ 
+.videobox span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    display: grid;
+    color: var(--white);
+    font-size: 20px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+    z-index: 3;
+}
 
  .review-grid {
    display: grid;
@@ -1680,16 +1652,6 @@
    color: #ffffff;
  }
 
-
-
-
-
-
-
-
-
-
-
  footer {
    background: #118e78;
    color: #dcf1ea;
@@ -1811,10 +1773,6 @@
    gap: 10px;
  }
 
-
- /* ===================================================
-   FLOATING WHATSAPP BUTTON (Sirf Mobile ke liye)
-=================================================== */
  .whatsapp-float {
    position: fixed;
    bottom: 90px;
@@ -1842,9 +1800,6 @@
    display: block;
  }
 
- /* ===================================================
-   STICKY BOTTOM ACTION BAR (Sirf Mobile ke liye)
-=================================================== */
  .sticky-action-bar {
    position: fixed;
    bottom: 0;
@@ -1856,7 +1811,6 @@
    padding: 12px 16px;
    border-top: 1px solid #d5e2dc;
    display: none;
-   /* Desktop par hide rahega */
  }
 
  .sticky-container {
@@ -1901,10 +1855,6 @@
    background-color: #004231;
  }
 
-
- /* ===================================================
-   MEDIA QUERY: Sirf Mobile Screen (768px ya usse kam) par dikhega
-=================================================== */
  @media (max-width: 768px) {
    .whatsapp-float {
      display: flex;
