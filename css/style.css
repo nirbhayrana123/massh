@@ -125,13 +125,12 @@
  
 
  .heading-lines {
-   position: relative;
-   display: inline-flex;
+   position: relative; 
  }
 
  .heading-lines img {
    position: absolute;
-   right: -60px;
+   right: 45px;
    top: -22px;
    width: 170px;
    pointer-events: none;
@@ -351,9 +350,7 @@ p.routine {
    color: rgb(119 120 119);
  }
 
- .container.hero-wrap .form-card .field label {
-   color: #3e3b3b;
- }
+  
 
  .rating img {
    width: 16px;
@@ -560,16 +557,25 @@ p.routine {
    background: var(--white);
    border: 1px solid #e0ebe6;
    border-radius: 16px;
-   padding: 24px 16px;
+      padding: 18px 16px;
    text-align: center;
    box-shadow: 0 8px 24px rgba(0, 70, 50, .06);
  }
+ .heading-lines {
+    display: flex;
+    flex-direction: column; /* Text aur image ko ek ke niche ek laane ke liye */
+    align-items: center;    /* Dono ko horizontally center karne ke liye */
+    text-align: center;     /* Text center karne ke liye */
+}
+
+.heading-lines h2.heading {
+    text-align: center;
+}
 
  .symptom-icon {
-   height: 86px;
-   width: 86px;
-   margin: 0 auto 18px;
- }
+    width: 120px;
+    margin: 0 auto 18px;
+}
 
 .symptom h3 {
     color: var(--green);
@@ -577,6 +583,7 @@ p.routine {
     font-weight: 600;
     font-size: 18px;
     text-align: center;
+    line-height: 135%;
 }
 
  .center-btn {
@@ -587,7 +594,7 @@ p.routine {
  .risk {
    display: grid;
    grid-template-columns: 1fr 400px;
-   align-items: self-start;
+   align-items: center;
    gap: 1px;
    margin-top: 40px;
  }
@@ -631,15 +638,23 @@ p.routine {
    margin-bottom: 20px;
  }
 
+ .BookNowotp {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
  .field {
-   display: flex;
-   flex-direction: column;
- }
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
 
  .field label {
    font-size: 13px;
    font-weight: 600;
-   color: var(--white);
+   color: #3e3b3b;
    margin-bottom: 6px;
  }
 
