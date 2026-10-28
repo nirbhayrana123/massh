@@ -510,7 +510,7 @@
    z-index: 99999;
    text-align: center;
  }
- 
+
  .feature-item {
    min-height: 117px;
    padding: 22px 15px;
@@ -786,22 +786,23 @@
  }
 
 
-.features-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    background-color: var(--white);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    max-width: 1325px;
-    margin: 0 auto;
-    width: 100%;
-    z-index: 9;
-    position: relative;
-}
+ .features-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   background-color: var(--white);
+   padding: 20px;
+   border-radius: 12px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+   max-width: 1325px;
+   margin: 0 auto;
+   width: 100%;
+   z-index: 9;
+   position: relative;
+ }
+
  .feature-item {
    flex: 1;
    display: flex;
@@ -1964,9 +1965,6 @@
      padding: 0 20px;
    }
 
-   .hero {
-     height: 55vh;
-   }
 
    section.section.cta form.inline-form {
      width: 100%;
@@ -1974,6 +1972,10 @@
  }
 
  @media (max-width: 1250px) {
+   .hero {
+     height: 88vh;
+   }
+
    .container {
      max-width: 100rem;
      padding: 0 4%;
@@ -2019,7 +2021,7 @@
 
  }
 
- @media(max-width:1050px) { 
+ @media(max-width:1050px) {
    .feature-item:nth-child(3) {
      border-right: 0;
    }
@@ -2069,6 +2071,14 @@
      gap: 34px;
    }
 
+   .feature-item p {
+     font-size: 16px;
+   }
+
+   .features-container.top-55 {
+     margin-top: 0;
+   }
+
    .hero h1 {
      font-size: 40px;
    }
@@ -2102,10 +2112,6 @@
      gap: 8px;
    }
 
-   .hero {
-     height: auto;
-   }
-
    .form-card {
      width: 100%;
      margin-top: auto;
@@ -2135,13 +2141,11 @@
  }
 
 
- /* Mobile & Tablet Screens (767px se niche) */
  @media (max-width: 767px) {
    .menu-toggle {
      display: block;
    }
 
-   /* Mobile Menu Dropdown Style */
    .nav-menu {
      display: none;
      position: absolute;
@@ -2176,7 +2180,6 @@
    .sticky-action-bar {
      display: block;
    }
-
 
    .sticky-btn {
      flex: 1;
@@ -2340,20 +2343,6 @@
      grid-template-columns: repeat(2, 1fr);
    }
 
-   .feature-item {
-     min-height: 110px;
-     border-bottom: 1px solid #e2eae6;
-   }
-
-   .feature-item:nth-child(odd) {
-     border-right: 1px solid #e2eae6;
-   }
-
-   .feature-item:nth-child(even) {
-     border-right: 0;
-   }
-
-
 
    .intro,
    .risk {
@@ -2463,6 +2452,16 @@
    section.section.cta form.inline-form {
      width: 100%;
    }
+
+   section.section.stones {
+     background-color: rgba(244, 249, 248, 1);
+     padding-bottom: 0px;
+   }
+
+
+
+
+
  }
 
 
@@ -2485,14 +2484,6 @@
    }
 
 
-   .feature-item {
-     border-bottom: none;
-   }
-
-   .feature-item:nth-child(odd) {
-     border-right: none;
-   }
-
    .feature-item p {
      font-size: 14px;
    }
@@ -2500,9 +2491,22 @@
    .heading-lines.left img {
      left: -26px;
    }
-    .heading-lines img {
-        right: -30px;
-    }
+
+   .heading-lines img {
+     right: -30px;
+   }
+
+   .callout img {
+     width: 40px;
+   }
+
+   .symptoms {
+     grid-template-columns: 1fr;
+   }
+
+   .dark-section .BookNowotp {
+     grid-template-columns: 1fr;
+   }
 
 
 
@@ -2511,10 +2515,4 @@
 
 
 
-
-
-
-
-    
-    }
-
+ }
