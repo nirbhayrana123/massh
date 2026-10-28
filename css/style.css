@@ -1215,7 +1215,10 @@
    bottom: 22%;
    background-color: #ccc;
  }
-
+.advisor .container.advisor-wrap {
+    position: relative;
+    z-index: 9;
+}
  ul.point2::before {
    content: "";
    width: 1px;
