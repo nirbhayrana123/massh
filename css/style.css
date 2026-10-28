@@ -126,15 +126,16 @@
 
  .heading-lines {
    position: relative; 
+   display: inline-block;
  }
 
- .heading-lines img {
-   position: absolute;
-   right: 45px;
-   top: -22px;
-   width: 170px;
-   pointer-events: none;
- }
+.heading-lines img {
+    position: absolute;
+    right: -60px;
+    top: -22px;
+    width: 170px;
+    pointer-events: none;
+}
 
  .heading-lines.left img {
    right: auto;
@@ -561,14 +562,7 @@ p.routine {
    text-align: center;
    box-shadow: 0 8px 24px rgba(0, 70, 50, .06);
  }
- .heading-lines {
-    display: flex;
-    flex-direction: column; /* Text aur image ko ek ke niche ek laane ke liye */
-    align-items: center;    /* Dono ko horizontally center karne ke liye */
-    text-align: center;     /* Text center karne ke liye */
-}
-
-.heading-lines h2.heading {
+section.intolerable {
     text-align: center;
 }
 
@@ -604,15 +598,15 @@ p.routine {
    gap: 10px;
  }
 
- .risk-list div {
-   background: var(--bg);
-   border: 1px solid #dae8e2;
-   padding: 3px 15px;
-   border-radius: 8px;
-   font-weight: 600;
-   font-size: 13px;
- }
-
+.risk-list div {
+    background: var(--bg);
+    border: 1px solid #dae8e2;
+    padding: 3px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: justify;
+}
  .risk-list div:before {
    content: "•";
    color: var(--green);
@@ -1318,6 +1312,9 @@ p.routine {
    border-style: solid;
    border-color: transparent transparent transparent var(--white);
  }
+section.section.cta .field label {
+    color: #fcfcfc;
+}
 
 .google-icon {
     width: 20px;
@@ -1635,13 +1632,12 @@ p.routine {
  .hospital-section p {
    color: var(--white);
  }
-
- .cta .inline-form {
-   background: #004d3a;
-   color: var(--white);
-   border: 1px solid rgba(255, 255, 255, .45);
-   text-align: left;
- }
+.cta .inline-form {
+    background: #004d3a;
+    color: var(--white);
+    border: 3px solid rgb(191 238 229 / 32%);
+    text-align: left;
+}
 
  .gallery-grid {
    display: grid;
