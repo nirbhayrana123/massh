@@ -144,7 +144,6 @@
    font-weight: 500;
  }
 
- /* Hamburger Icon Desktop par Hidden rahega */
  .menu-toggle {
    display: none;
    font-size: 22px;
@@ -238,6 +237,7 @@
    z-index: 999999;
    background-color: var(--white);
    box-shadow: 0 3px 15px rgba(0, 0, 0, .07);
+   width: 100%;
  }
 
  .nav {
@@ -2172,9 +2172,8 @@
  @media (max-width: 767px) {
    .menu-toggle {
      display: block;
+     width: 20px;
    }
-
-
 
    .nav-menu {
      display: none;
@@ -2189,19 +2188,21 @@
 
    .nav-menu.active {
      display: block;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
    }
 
    .nav-menu ul {
      flex-direction: column;
-     padding: 15px 0;
-     gap: 0;
+     gap: 18px;
+     text-align: center;
    }
-
 
    .nav-menu ul li a {
      display: block;
-     padding: 12px 20px;
-     border-bottom: 1px solid #eee;
    }
 
    .whatsapp-float {
@@ -2374,6 +2375,7 @@
    .phone {
      font-size: 12px;
      padding: 9px 12px;
+     gap: 0;
    }
 
    .hero h1 {
@@ -2384,11 +2386,10 @@
    .form-card {
      padding: 21px;
    }
-
-   .features-container {
-     grid-template-columns: repeat(2, 1fr);
-   }
-
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+    }
 
    .intro,
    .risk {
@@ -2645,14 +2646,15 @@
    p.question {
      font-size: 14px;
    }
-.section {
-        padding: 40px 0;
+
+   .section {
+     padding: 40px 0;
+   }
+
+    .heading {
+        font-size: 23px;
     }
 
 
-
-
-
-    
 
  }
