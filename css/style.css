@@ -622,7 +622,7 @@
  }
 
  .booking-form {
-   background: rgba(253, 248, 244, 1); 
+   background: rgba(253, 248, 244, 1);
    padding: 20px;
    border-radius: 20px;
    max-width: 900px;
@@ -637,16 +637,17 @@
    gap: 10px;
    margin-bottom: 20px;
  }
+
  .otp-section label {
-    color: rgba(54, 54, 54, 1);
-}
+   color: rgba(54, 54, 54, 1);
+ }
 
  .BookNowotp {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 0px;
-}
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 10px;
+   margin-bottom: 0px;
+ }
 
  .field {
    display: flex;
@@ -661,14 +662,15 @@
    margin-bottom: 6px;
  }
 
- .field input, .field select {
-    padding: 12px 15px;
-    border-radius: 8px;
-    outline: none;
-    font-size: 14px;
-    background: var(--white);
-    border: 1px solid rgba(22, 135, 114, 0.13);
-}
+ .field input,
+ .field select {
+   padding: 12px 15px;
+   border-radius: 8px;
+   outline: none;
+   font-size: 14px;
+   background: var(--white);
+   border: 1px solid rgba(22, 135, 114, 0.13);
+ }
 
  a.mainlogo {
    width: 220px;
@@ -679,9 +681,10 @@
    margin: 15px auto;
    text-align: left;
  }
+
  p.confidential-text {
-    color: #000000 !important;
-}
+   color: #000000 !important;
+ }
 
  .otp-wrapper {
    display: flex;
@@ -695,14 +698,14 @@
    gap: 10px;
  }
 
-.otp-inputs input {
-    width: 34px;
-    height: 40px;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid rgba(22, 135, 114, 0.13);
-}
+ .otp-inputs input {
+   width: 34px;
+   height: 40px;
+   text-align: center;
+   font-size: 16px;
+   border-radius: 8px;
+   border: 1px solid rgba(22, 135, 114, 0.13);
+ }
 
  .resend-otp {
    color: #888;
@@ -718,7 +721,7 @@
    font-size: 16px;
    font-weight: 600;
    border-radius: 8px;
-   transition: 0.7s; 
+   transition: 0.7s;
  }
 
 
@@ -756,7 +759,7 @@
    height: 48px;
    display: flex;
    align-items: center;
-   justify-content: center; 
+   justify-content: center;
  }
 
  .feature-item .icon img {
@@ -1181,12 +1184,12 @@
    background-color: #ccc;
  }
 
-.mini-checks li {
-    padding: 6px 5px;
-    border-bottom: 1px solid #ccc;
-    list-style: none;
-    font-size: 16px;
-}
+ .mini-checks li {
+   padding: 6px 5px;
+   border-bottom: 1px solid #ccc;
+   list-style: none;
+   font-size: 16px;
+ }
 
  .advisor-wrap {
    display: flex;
@@ -2137,50 +2140,66 @@
      padding: 6px 15px 5px 25px;
    }
 
-    .hero-wrap { 
-        gap: 20px;
-    }
+   .hero-wrap {
+     gap: 20px;
+   }
 
-span.badge img {
-    width: 50px;
-    height: 50px; 
-}
-.badge { 
-    padding: 6px 15px 6px 55px; 
-}
+   span.badge img {
+     width: 50px;
+     height: 50px;
+   }
 
-.benefits { 
-    margin: auto; 
-}
-.hero:before { 
-    background-size: cover;
-    background-position: center; 
-}
-.lines {
-    position: relative;
-    width: 100%;
-}
-.container.intro {
-    flex-direction: column;
-}
+   .badge {
+     padding: 6px 15px 6px 55px;
+   }
 
-.anatomy {
-    width: auto;
-}
-.risk { 
-    grid-template-columns: 1fr; 
-}
+   .benefits {
+     margin: auto;
+   }
 
+   .hero:before {
+     background-size: cover;
+     background-position: center;
+   }
 
+   .lines {
+     position: relative;
+     width: 100%;
+   }
 
+   .container.intro {
+     flex-direction: column;
+   }
 
+   .anatomy {
+     width: auto;
+   }
 
+   .risk {
+     grid-template-columns: 1fr;
+   }
 
- }
+   .benefit::after,
+   .feature-item::after {
+     display: none;
+   }
 
- @media(max-width:720px) {
+   .benefit:nth-child(4),
+   .benefit:nth-child(5) {
+     border-top: none;
+   }
 
+   .hospital-grid,
+   .doctors,.review-grid,.gallery-grid {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 15px;
+   }
 
+   .mini-checks {
+     grid-template-columns: 1fr;
+     gap: 0px;
+   }
+  
    .section {
      padding: 58px 0;
    }
@@ -2201,12 +2220,7 @@ span.badge img {
      font-size: 12px;
      padding: 9px 12px;
    }
-
-   .hero-wrap {
-     grid-template-columns: 1fr;
-     padding: 48px 0 90px;
-   }
-
+ 
    .hero h1 {
      font-size: 47px;
    }
@@ -2220,8 +2234,7 @@ span.badge img {
    }
 
    .benefits {
-     grid-template-columns: repeat(2, 1fr);
-     margin-top: -42px;
+     grid-template-columns: repeat(2, 1fr); 
    }
 
    .benefit {
@@ -2237,9 +2250,7 @@ span.badge img {
      border-right: 0;
    }
 
-   .benefit:last-child {
-     grid-column: 1/-1;
-   }
+   
 
    .intro,
    .risk {
@@ -2256,13 +2267,7 @@ span.badge img {
    .symptom {
      padding: 18px 11px;
    }
-
-   .symptom:last-child {
-     grid-column: 1/-1;
-     max-width: 50%;
-     justify-self: center;
-   }
-
+ 
 
 
    .insurance {
