@@ -214,11 +214,9 @@ header {
    font-size: 21px;
  }
 
- p.routine {
+ .feature-item p {
    font-weight: 600;
    font-size: 20px;
-   line-height: 135%;
-   letter-spacing: 0px;
    text-align: center;
  }
 
@@ -508,7 +506,7 @@ header {
    text-align: center;
  }
 
- .benefits {
+ .features-container {
    position: relative;
    margin: -50px auto 0;
    z-index: 3;
@@ -521,7 +519,7 @@ header {
    box-shadow: 0px 2px 11.7px 1px rgba(0, 0, 0, 0.14);
  }
 
- .benefit {
+ .feature-item {
    min-height: 117px;
    padding: 22px 15px;
    text-align: center;
@@ -533,12 +531,10 @@ header {
    position: relative;
  }
 
- .benefit:first-child::after,
  .feature-item:first-child::after {
    display: none;
  }
 
- .benefit::after,
  .feature-item::after {
    content: "";
    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #168772 50%, rgba(255, 255, 255, 0) 100%);
@@ -546,14 +542,15 @@ header {
    width: 2px;
    height: 90px;
    left: -1px;
-   top: 10px;
+   top: 50%;
+   transform: translateY(-50%);
  }
 
  span.icon img {
    width: 35px;
  }
 
- .benefit strong {
+ .feature-item strong {
    font-size: 15px;
    line-height: 1.2;
  }
@@ -973,7 +970,7 @@ header {
    grid-template-columns: 1fr 1fr 1fr auto;
    gap: 13px;
    align-items: end;
-   margin: 34px auto 0; 
+   margin: 34px auto 0;
  }
 
  .inline-form .btn {
@@ -2051,7 +2048,7 @@ header {
     width: 100%;
 }
 
-   .benefit:nth-child(3) {
+   .feature-item:nth-child(3) {
      border-right: 0;
    }
 
@@ -2079,8 +2076,8 @@ header {
      grid-column: 1/-1;
    }
 
-   .benefit:nth-child(4),
-   .benefit:nth-child(5) {
+   .feature-item:nth-child(4),
+   .feature-item:nth-child(5) {
      border-top: 1px solid #e2eae6;
    }
       section.section.cta form.inline-form {
@@ -2100,10 +2097,6 @@ header {
 
    .hero h1 {
      font-size: 40px;
-   }
-
-   .hero .sub {
-     font-size: 16px;
    }
 
    .location {
@@ -2208,9 +2201,6 @@ header {
      display: block;
    }
 
-   .features-container {
-     flex-wrap: wrap;
-   }
 
    .sticky-btn {
      flex: 1;
@@ -2292,7 +2282,7 @@ header {
      padding: 6px 15px 6px 55px;
    }
 
-   .benefits {
+   .features-container {
      margin: auto;
    }
 
@@ -2318,18 +2308,19 @@ header {
      grid-template-columns: 1fr;
    }
 
-   .benefit::after,
    .feature-item::after {
      display: none;
    }
 
-   .benefit:nth-child(4),
-   .benefit:nth-child(5) {
+   .feature-item:nth-child(4),
+   .feature-item:nth-child(5) {
      border-top: none;
    }
 
    .hospital-grid,
-   .doctors,.review-grid,.gallery-grid {
+   .doctors,
+   .review-grid,
+   .gallery-grid {
      grid-template-columns: repeat(2, 1fr);
      gap: 15px;
    }
@@ -2338,7 +2329,7 @@ header {
      grid-template-columns: 1fr;
      gap: 0px;
    }
-  
+
    .section {
      padding: 58px 0;
    }
@@ -2359,37 +2350,34 @@ header {
      font-size: 12px;
      padding: 9px 12px;
    }
- 
+
    .hero h1 {
      font-size: 47px;
    }
 
-   .hero .sub {
-     font-size: 16px;
-   }
 
    .form-card {
      padding: 21px;
    }
 
-   .benefits {
-     grid-template-columns: repeat(2, 1fr); 
+   .features-container {
+     grid-template-columns: repeat(2, 1fr);
    }
 
-   .benefit {
+   .feature-item {
      min-height: 110px;
      border-bottom: 1px solid #e2eae6;
    }
 
-   .benefit:nth-child(odd) {
+   .feature-item:nth-child(odd) {
      border-right: 1px solid #e2eae6;
    }
 
-   .benefit:nth-child(even) {
+   .feature-item:nth-child(even) {
      border-right: 0;
    }
 
-   
+
 
    .intro,
    .risk {
@@ -2406,8 +2394,6 @@ header {
    .symptom {
      padding: 18px 11px;
    }
- 
-
 
    .insurance {
      align-items: flex-start;
