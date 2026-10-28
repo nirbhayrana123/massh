@@ -17,15 +17,35 @@
 </head>
 
 <body>
-  <header>
-    <div class="container nav">
+ <header>
+  <div class="container nav">
+    <!-- Left side: Hamburger menu aur Logo -->
+    <div class="nav-left">
+      <!-- Click karne par toggleMenu() call hoga -->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+      </div>
       <a href="index.html" class="mainlogo">
-        <img src="image/main-logo.svg" />
+        <img src="image/main-logo.svg" alt="Logo">
       </a>
-
-      <a class="phone" href="tel:+917290975999"><i class="fa-solid fa-phone"></i> Call +91 7290975999</a>
     </div>
-  </header>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right side: Call Button -->
+    <a class="phone" href="tel:+917290975999">
+      <i class="fa-solid fa-phone"></i> Call +91 7290975999
+    </a>
+  </div>
+</header>
 
   <main id="top">
     <section class="hero">
@@ -980,6 +1000,24 @@
       modal.style.display = 'none';
       player.src = ''; // src empty karne se video play hona band ho jata hai
     }
+
+ 
+  function toggleMenu() {
+    var menu = document.getElementById("navMenu");
+    var icon = document.getElementById("menu-icon");
+
+    // Menu toggle karna
+    menu.classList.toggle("active");
+
+    // Icon change karna (Hamburger se Close 'X' icon)
+    if (menu.classList.contains("active")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  } 
   </script>
 
 
