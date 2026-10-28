@@ -764,19 +764,7 @@
    text-align: center;
  }
 
- .section.hospital-section h2::after {
-   content: "";
-   position: absolute;
-   z-index: 99999;
-   background-image: url(../image/line2.png);
-   background-size: auto;
-   background-position: center;
-   background-repeat: no-repeat;
-   top: -83px;
-   left: -44px;
-   width: 172px;
-   height: 200px;
- }
+ 
 
  .hospital .place::after {
    content: "";
