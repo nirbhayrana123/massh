@@ -134,12 +134,14 @@
    right: -60px;
    top: -22px;
    width: 170px;
+   pointer-events: none;
  }
 
-.heading-lines.left img {
-    right: auto;
-    left: -55px;
-}
+ .heading-lines.left img {
+   right: auto;
+   left: -55px;
+ }
+
  a.btn-primary.gold {
    background-color: rgba(255, 167, 0, 1);
    color: #000;
@@ -724,7 +726,6 @@ p.routine {
    padding: 0 10px;
  }
 
-
  .feature-item .icon {
    width: 48px;
    height: 48px;
@@ -772,20 +773,6 @@ p.routine {
    text-align: center;
  }
 
- .section.hospital-section h2::after {
-   content: "";
-   position: absolute;
-   z-index: 99999;
-   background-image: url(../image/line2.png);
-   background-size: auto;
-   background-position: center;
-   background-repeat: no-repeat;
-   top: -83px;
-   left: -44px;
-   width: 172px;
-   height: 200px;
- }
-
  .hospital .place::after {
    content: "";
    position: absolute;
@@ -825,7 +812,6 @@ p.routine {
    height: 20px;
  }
 
-
  .hospital-meta .rating {
    display: block;
    padding: 0;
@@ -859,42 +845,6 @@ p.routine {
    background-color: var(--bg);
    padding: 60px 0;
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  @media (max-width: 768px) {
    .form-grid {
@@ -1449,30 +1399,124 @@ p.routine {
    margin: 35px 0 45px;
  }
 
- .video {
-   height: 230px;
-   border-radius: 12px;
-   position: relative;
-   overflow: hidden;
-   background-size: cover;
-   background-position: center;
+
+.videobox img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 75%;
+}
+
+.videobox {
+    position: relative;
+    width: 210px;
+    height: 288px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: #000000;
+}
+
+ .videobox:hover {
+   transform: translateY(-5px);
  }
 
- .video:after {
-   content: "▶";
+ .videobox::after {
+   content: "";
+   border: 1px solid #ffffffbd;
+   width: 90%;
+   height: 90%;
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   width: 50px;
-   height: 50px;
-   border: 1px solid var(--white);
+   pointer-events: none;
+   border-radius: 8px;
+ }
+
+.videobox::before {
+    content: "";
+    position: absolute;
+    background-image: url(../image/mm.png);
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 20px;
+    left: auto;
+    right: 15px;
+    width: 20px;
+    height: 28px;
+    z-index: 9;
+}
+
+ .videobox span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 45px;
+   min-height: 45px;
+   min-width: 45px;
+   height: 45px;
+   border: 2px solid #fff;
    border-radius: 50%;
-   display: grid;
-   place-items: center;
-   color: var(--white);
-   background: rgba(0, 0, 0, .28);
-   font-size: 20px
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #fff;
+   font-size: 16px;
+   transition: background-color 0.3s ease;
+   z-index: 2;
+ }
+
+ .videobox:hover span {
+   background-color: var(--green);
+ }
+
+ .video-modal {
+   display: none;
+   position: fixed;
+   z-index: 9999;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.85);
+   align-items: center;
+   justify-content: center;
+ }
+
+ .modal-content {
+   position: relative;
+   width: 90%;
+   max-width: 800px;
+   aspect-ratio: 16 / 9;
+   background: #000;
+   border-radius: 10px;
+   overflow: hidden;
+ }
+
+ .modal-content iframe {
+   width: 100%;
+   height: 100%;
+   border: none;
+ }
+
+ /* Close Button */
+ .close-btn {
+   position: absolute;
+   top: -40px;
+   right: 0;
+   color: #fff;
+   font-size: 30px;
+   font-weight: bold;
+   cursor: pointer;
+ }
+
+ .close-btn:hover {
+   color: #ff4d4d;
  }
 
  .review-grid {
@@ -1700,16 +1744,6 @@ p.routine {
    color: #ffffff;
  }
 
-
-
-
-
-
-
-
-
-
-
  footer {
    background: #118e78;
    color: #dcf1ea;
@@ -1831,10 +1865,6 @@ p.routine {
    gap: 10px;
  }
 
-
- /* ===================================================
-   FLOATING WHATSAPP BUTTON (Sirf Mobile ke liye)
-=================================================== */
  .whatsapp-float {
    position: fixed;
    bottom: 90px;
@@ -1862,9 +1892,6 @@ p.routine {
    display: block;
  }
 
- /* ===================================================
-   STICKY BOTTOM ACTION BAR (Sirf Mobile ke liye)
-=================================================== */
  .sticky-action-bar {
    position: fixed;
    bottom: 0;
@@ -1876,7 +1903,6 @@ p.routine {
    padding: 12px 16px;
    border-top: 1px solid #d5e2dc;
    display: none;
-   /* Desktop par hide rahega */
  }
 
  .sticky-container {
@@ -1921,10 +1947,6 @@ p.routine {
    background-color: #004231;
  }
 
-
- /* ===================================================
-   MEDIA QUERY: Sirf Mobile Screen (768px ya usse kam) par dikhega
-=================================================== */
  @media (max-width: 768px) {
    .whatsapp-float {
      display: flex;
