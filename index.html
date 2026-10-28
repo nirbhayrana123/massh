@@ -625,44 +625,47 @@
           </div>
         </div>
 
-        <div class="video-row">
-          <div class="videobox">
-            <span><i class="fa fa-play" aria-hidden="true"></i>
-            </span>
-            <img src="image/video-img.png">
-          </div>
+      <!-- Video Gallery Row -->
+  <div class="video-row">
+    <!-- Har box me 'data-video' attribute me YouTube video ki ID set karein -->
+    <div class="videobox" data-video="dQw4w9WgXcQ">
+      <span><i class="fa fa-play" aria-hidden="true"></i></span>
+      <img src="image/video-img.png" alt="Video 1">
+    </div>
 
-          <div class="videobox">
-            <span><i class="fa fa-play" aria-hidden="true"></i>
-            </span>
-            <img src="image/video-img.png">
-          </div>
+    <div class="videobox" data-video="dQw4w9WgXcQ">
+      <span><i class="fa fa-play" aria-hidden="true"></i></span>
+      <img src="image/video-img.png" alt="Video 2">
+    </div>
 
-          <div class="videobox">
-            <span><i class="fa fa-play" aria-hidden="true"></i>
-            </span>
-            <img src="image/video-img.png">
-          </div>
+    <div class="videobox" data-video="dQw4w9WgXcQ">
+      <span><i class="fa fa-play" aria-hidden="true"></i></span>
+      <img src="image/video-img.png" alt="Video 3">
+    </div>
 
-          <div class="videobox">
-            <span><i class="fa fa-play" aria-hidden="true"></i>
-            </span>
-            <img src="image/video-img.png">
-          </div>
+    <div class="videobox" data-video="dQw4w9WgXcQ">
+      <span><i class="fa fa-play" aria-hidden="true"></i></span>
+      <img src="image/video-img.png" alt="Video 4">
+    </div>
 
-          <div class="videobox">
-            <span><i class="fa fa-play" aria-hidden="true"></i>
-            </span>
-            <img src="image/video-img.png">
-          </div>
+    <div class="videobox" data-video="dQw4w9WgXcQ">
+      <span><i class="fa fa-play" aria-hidden="true"></i></span>
+      <img src="image/video-img.png" alt="Video 5">
+    </div>
 
-          <div class="videobox">
-            <span><i class="fa fa-play" aria-hidden="true"></i>
-            </span>
-            <img src="image/video-img.png">
-          </div>
+    <div class="videobox" data-video="dQw4w9WgXcQ">
+      <span><i class="fa fa-play" aria-hidden="true"></i></span>
+      <img src="image/video-img.png" alt="Video 6">
+    </div>
+  </div>
 
-        </div>
+  <!-- Video Modal Structure -->
+  <div id="videoModal" class="video-modal">
+    <div class="modal-content">
+      <span class="close-btn">×</span>
+      <iframe id="videoPlayer" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
 
         <div class="canterr">
           <div class="review-badge">
@@ -962,5 +965,46 @@
     }
   });
 </script>
+
+
+
+<!-- JavaScript Script -->
+  <script>
+    const modal = document.getElementById('videoModal');
+    const player = document.getElementById('videoPlayer');
+    const closeBtn = document.querySelector('.close-btn');
+    const videoBoxes = document.querySelectorAll('.videobox');
+
+    // Har videobox par click listener lagana
+    videoBoxes.forEach(box => {
+      box.addEventListener('click', function() {
+        // 'data-video' se YouTube Video ID nikalna
+        const videoId = this.getAttribute('data-video');
+        
+        // YouTube embed URL autoplay ke sath set karna
+        player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        
+        // Modal open karna
+        modal.style.display = 'flex';
+      });
+    });
+
+    // Close Button par click karne se popup band aur video stop hona
+    closeBtn.addEventListener('click', closeModal);
+
+    // Dark Background par click karne par popup band hona
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Modal close karne aur video off karne ka function
+    function closeModal() {
+      modal.style.display = 'none';
+      player.src = ''; // src empty karne se video play hona band ho jata hai
+    }
+  </script>
+
 
 </html>
