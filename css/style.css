@@ -1958,6 +1958,10 @@
    background-color: #004231;
  }
 
+
+
+
+
  @media (max-width: 1376px) {
    .container {
      max-width: 1200px;
@@ -2071,6 +2075,8 @@
  }
 
  @media(max-width:991px) {
+
+
    .hero-wrap {
      grid-template-columns: 1fr;
      gap: 34px;
@@ -2145,11 +2151,12 @@
 
  }
 
-
  @media (max-width: 767px) {
    .menu-toggle {
      display: block;
    }
+
+
 
    .nav-menu {
      display: none;
@@ -2171,6 +2178,7 @@
      padding: 15px 0;
      gap: 0;
    }
+
 
    .nav-menu ul li a {
      display: block;
@@ -2196,9 +2204,24 @@
    }
 
    .surgery-compare .sc-wrap {
-     grid-template-columns: 1fr;
+     grid-template-columns: 1fr 1.15fr 1fr;
      gap: 16px;
      padding: 12px;
+   }
+
+   .surgery-compare {
+     width: 100%;
+     overflow-x: auto;
+     -webkit-overflow-scrolling: touch;
+   }
+
+   .leftsidebt.show {
+     display: none;
+   }
+
+   .sc-wrap {
+     display: flex;
+     min-width: 700px;
    }
 
    .surgery-compare .sc-left {
