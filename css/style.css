@@ -1282,17 +1282,16 @@ p.routine {
    padding: 15px;
  }
 
- .google-icon-wrapper {
-   position: relative;
-   background: var(--white);
-   width: 52px;
-   height: 52px;
-   border-radius: 12px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-shrblack: 0;
- }
+.google-icon-wrapper {
+    position: relative;
+    background: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
  .google-icon-wrapper::after {
    content: '';
@@ -1305,24 +1304,23 @@ p.routine {
    border-color: transparent transparent transparent var(--white);
  }
 
- .google-icon {
-   width: 28px;
-   height: 28px;
- }
-
+.google-icon {
+    width: 20px;
+    height: 20px;
+}
  .review-content {
    display: flex;
    flex-direction: column;
    gap: 2px;
  }
 
- .review-title {
-   font-size: 15px;
-   font-weight: 600;
-   letter-spacing: 0.2px;
-   margin: 0;
-   line-height: 1.2;
- }
+.review-title {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    margin: 0;
+    line-height: 1.2;
+}
 
  .review-rating {
    display: flex;
@@ -1330,25 +1328,11 @@ p.routine {
    gap: 8px;
    margin-top: 2px;
  }
-
- .score {
-   font-size: 26px;
-   font-weight: 700;
-   line-height: 1;
- }
-
- .stars {
-   display: flex;
-   gap: 3px;
-   color: #ffb400;
- }
-
- .stars svg {
-   width: 18px;
-   height: 18px;
-   fill: currentColor;
- }
-
+.score {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1;
+}
  .review-count {
    font-size: 13px;
    font-weight: 400;
@@ -1456,16 +1440,16 @@ p.routine {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   width: 45px;
-   min-height: 45px;
-   min-width: 45px;
-   height: 45px;
-   border: 2px solid #fff;
+   width: 50px;
+   min-height: 50px;
+   min-width: 50px;
+   height: 50px;
+   border: 1px solid var(--white);
    border-radius: 50%;
    display: flex;
    align-items: center;
    justify-content: center;
-   color: #fff;
+   color: var(--white);
    font-size: 16px;
    transition: background-color 0.3s ease;
    z-index: 2;
@@ -1493,7 +1477,7 @@ p.routine {
    width: 90%;
    max-width: 800px;
    aspect-ratio: 16 / 9;
-   background: #000;
+   background: var(--black);
    border-radius: 10px;
    overflow: hidden;
  }
@@ -1509,7 +1493,7 @@ p.routine {
    position: absolute;
    top: -40px;
    right: 0;
-   color: #fff;
+   color: var(--white);
    font-size: 30px;
    font-weight: bold;
    cursor: pointer;
