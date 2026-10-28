@@ -2464,3 +2464,57 @@
      width: 100%;
    }
  }
+
+
+
+ @media (max-width: 491px) {
+   .container {
+     padding: 0 5%;
+   }
+
+   a.mainlogo {
+     width: 190px;
+   }
+
+   .hero h1 {
+     font-size: 28px;
+   }
+
+   .otp input {
+     width: 50px;
+   }
+
+
+   .feature-item {
+     border-bottom: none;
+   }
+
+   .feature-item:nth-child(odd) {
+     border-right: none;
+   }
+
+   .feature-item p {
+     font-size: 14px;
+   }
+
+   .heading-lines.left img {
+     left: -26px;
+   }
+    .heading-lines img {
+        right: -30px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    }
+
