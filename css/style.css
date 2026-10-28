@@ -1102,7 +1102,7 @@
    align-items: center;
    gap: 25px;
    background: #e5f3ef;
-   border: 1px solid #a5d7c9;
+   border: 1px solid rgba(22, 135, 114, 0.6);
    border-radius: 13px;
    padding: 27px 35px;
  }
@@ -2491,9 +2491,12 @@
    }
 
    .insurance h3 {
-     font-size: 23px;
+     font-size: 18px;
+     margin-bottom: 10px;
    }
-
+.insurance p {
+    font-size: 14px;
+}
    ul li.bb-n {
      border: none;
    }
