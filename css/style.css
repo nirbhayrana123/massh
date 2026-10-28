@@ -101,7 +101,71 @@
    height: 2px;
    background: currentColor;
  }
+/***********************menu hambugar*****************/
 
+header {
+    background-color: #ffffff;
+    padding: 10px 0;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.container.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Desktop Menu Links */
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Hamburger Icon Desktop par Hidden rahega */
+.menu-toggle {
+    display: none;
+    font-size: 22px;
+    color: #007664;
+    cursor: pointer;
+}
+
+.mainlogo img {
+    height: 40px;
+    display: block;
+}
+
+.phone {
+    background-color: #007664;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+} 
+
+/**************menu hambargur**********************/
 
 
  section {
@@ -1983,6 +2047,10 @@
    .benefit:nth-child(5) {
      border-top: 1px solid #e2eae6;
    }
+      section.section.cta form.inline-form {
+    width: 100%; 
+}
+ 
  }
 
  @media(max-width:991px) {
@@ -2050,7 +2118,9 @@
    .advisor h2 {
      font-size: 30px;
    }
-
+   section.section.cta form.inline-form {
+    width: 100%; 
+}
 
 
 
@@ -2058,8 +2128,39 @@
  }
 
 
+ /* Mobile & Tablet Screens (767px se niche) */ 
+ @media (max-width: 767px) { 
+    .menu-toggle {
+        display: block;  
+    }
 
- @media (max-width: 767px) {
+    /* Mobile Menu Dropdown Style */
+    .nav-menu {
+        display: none;  
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    } 
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 0;
+    }
+
+    .nav-menu ul li a {
+        display: block;
+        padding: 12px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
    .whatsapp-float {
      display: flex;
    }
@@ -2357,4 +2458,7 @@
    .otp input {
      width: 34px;
    }
+   section.section.cta form.inline-form {
+    width: 100%; 
+}
  }
