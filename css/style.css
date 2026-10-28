@@ -101,71 +101,72 @@
    height: 2px;
    background: currentColor;
  }
-/***********************menu hambugar*****************/
 
-header {
-    background-color: #ffffff;
-    padding: 10px 0;
-    position: relative;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
+ /***********************menu hambugar*****************/
 
-.container.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
-}
+ header {
+   background-color: #ffffff;
+   padding: 10px 0;
+   position: relative;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+ }
 
-.nav-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
+ .container.nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 15px;
+ }
 
-/* Desktop Menu Links */
-.nav-menu ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
+ .nav-left {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+ }
 
-.nav-menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
+ /* Desktop Menu Links */
+ .nav-menu ul {
+   display: flex;
+   list-style: none;
+   gap: 20px;
+   margin: 0;
+   padding: 0;
+ }
 
-/* Hamburger Icon Desktop par Hidden rahega */
-.menu-toggle {
-    display: none;
-    font-size: 22px;
-    color: #007664;
-    cursor: pointer;
-}
+ .nav-menu a {
+   text-decoration: none;
+   color: #333;
+   font-weight: 500;
+ }
 
-.mainlogo img {
-    height: 40px;
-    display: block;
-}
+ /* Hamburger Icon Desktop par Hidden rahega */
+ .menu-toggle {
+   display: none;
+   font-size: 22px;
+   color: #007664;
+   cursor: pointer;
+ }
 
-.phone {
-    background-color: #007664;
-    color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
-} 
+ .mainlogo img {
+   height: 40px;
+   display: block;
+ }
 
-/**************menu hambargur**********************/
+ .phone {
+   background-color: #007664;
+   color: #ffffff;
+   padding: 8px 16px;
+   border-radius: 50px;
+   text-decoration: none;
+   font-size: 14px;
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   white-space: nowrap;
+ }
+
+ /**************menu hambargur**********************/
 
 
  section {
@@ -378,6 +379,10 @@ header {
    margin: 20px 0;
  }
 
+ .features-container.top-55 {
+   margin-top: -55px;
+ }
+
  .location {
    margin-bottom: 10px;
    border-radius: 999px;
@@ -505,20 +510,7 @@ header {
    z-index: 99999;
    text-align: center;
  }
-
- .features-container {
-   position: relative;
-   margin: -50px auto 0;
-   z-index: 3;
-   background: var(--white);
-   border-radius: 18px;
-   display: grid;
-   grid-template-columns: repeat(6, 1fr);
-   overflow: hidden;
-   max-width: 1260px;
-   box-shadow: 0px 2px 11.7px 1px rgba(0, 0, 0, 0.14);
- }
-
+ 
  .feature-item {
    min-height: 117px;
    padding: 22px 15px;
@@ -792,9 +784,9 @@ header {
    color: #777;
    margin-top: 15px;
  }
- 
 
- .features-container {
+
+.features-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     align-items: center;
@@ -804,11 +796,12 @@ header {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    max-width: 1200px;
+    max-width: 1325px;
     margin: 0 auto;
     width: 100%;
+    z-index: 9;
+    position: relative;
 }
-
  .feature-item {
    flex: 1;
    display: flex;
@@ -833,13 +826,6 @@ header {
    object-fit: contain;
  }
 
- .feature-item p {
-   margin: 0;
-   font-size: 20px;
-   font-weight: 600;
-   color: var(--black);
-   line-height: 1.3;
- }
 
  section.bgg {
    background-color: #f2f8f6;
@@ -1971,20 +1957,21 @@ header {
  }
 
  @media (max-width: 1376px) {
-    .container {
-        max-width: 1200px;  
-        width: 100%;
-        margin: 0 auto;    
-        padding: 0 20px;    
-    }
-    .hero { 
-    height: 55vh; 
-}
+   .container {
+     max-width: 1200px;
+     width: 100%;
+     margin: 0 auto;
+     padding: 0 20px;
+   }
 
-section.section.cta form.inline-form {
-    width: 100%; 
-}
-}
+   .hero {
+     height: 55vh;
+   }
+
+   section.section.cta form.inline-form {
+     width: 100%;
+   }
+ }
 
  @media (max-width: 1250px) {
    .container {
@@ -2023,35 +2010,16 @@ section.section.cta form.inline-form {
    .insurance img {
      width: 50px;
    }
+
    .container {
-    max-width: 1270px;
-    margin: 0 auto;
-}
+     max-width: 1270px;
+     margin: 0 auto;
+   }
 
 
  }
 
- @media(max-width:1050px) {
-         .benefits {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 850px;
-        margin-top: -30px;
-    }
-  .features-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    background-color: var(--white);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    max-width: 900px;
-    margin: 0 auto;
-    width: 100%;
-}
-
+ @media(max-width:1050px) { 
    .feature-item:nth-child(3) {
      border-right: 0;
    }
@@ -2084,13 +2052,15 @@ section.section.cta form.inline-form {
    .feature-item:nth-child(5) {
      border-top: 1px solid #e2eae6;
    }
-      section.section.cta form.inline-form {
-    width: 100%; 
-}
-.hero { 
-    height: auto; 
-}
- 
+
+   section.section.cta form.inline-form {
+     width: 100%;
+   }
+
+   .hero {
+     height: auto;
+   }
+
  }
 
  @media(max-width:991px) {
@@ -2154,9 +2124,10 @@ section.section.cta form.inline-form {
    .advisor h2 {
      font-size: 30px;
    }
+
    section.section.cta form.inline-form {
-    width: 100%; 
-}
+     width: 100%;
+   }
 
 
 
@@ -2164,38 +2135,39 @@ section.section.cta form.inline-form {
  }
 
 
- /* Mobile & Tablet Screens (767px se niche) */ 
- @media (max-width: 767px) { 
-    .menu-toggle {
-        display: block;  
-    }
+ /* Mobile & Tablet Screens (767px se niche) */
+ @media (max-width: 767px) {
+   .menu-toggle {
+     display: block;
+   }
 
-    /* Mobile Menu Dropdown Style */
-    .nav-menu {
-        display: none;  
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #ffffff;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        z-index: 1000;
-    } 
-    .nav-menu.active {
-        display: block;
-    }
+   /* Mobile Menu Dropdown Style */
+   .nav-menu {
+     display: none;
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 100%;
+     background-color: #ffffff;
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+     z-index: 1000;
+   }
 
-    .nav-menu ul {
-        flex-direction: column;
-        padding: 15px 0;
-        gap: 0;
-    }
+   .nav-menu.active {
+     display: block;
+   }
 
-    .nav-menu ul li a {
-        display: block;
-        padding: 12px 20px;
-        border-bottom: 1px solid #eee;
-    }
+   .nav-menu ul {
+     flex-direction: column;
+     padding: 15px 0;
+     gap: 0;
+   }
+
+   .nav-menu ul li a {
+     display: block;
+     padding: 12px 20px;
+     border-bottom: 1px solid #eee;
+   }
 
    .whatsapp-float {
      display: flex;
@@ -2487,7 +2459,8 @@ section.section.cta form.inline-form {
    .otp input {
      width: 34px;
    }
+
    section.section.cta form.inline-form {
-    width: 100%; 
-}
+     width: 100%;
+   }
  }
