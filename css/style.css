@@ -213,6 +213,7 @@
    border-radius: 4px;
    padding: 18px 36px;
    font-size: 21px;
+   text-align: center;
  }
 
  .feature-item p {
@@ -1976,6 +1977,10 @@
      height: 88vh;
    }
 
+   .flexx {
+     width: 70%;
+   }
+
    .container {
      max-width: 100rem;
      padding: 0 4%;
@@ -2384,7 +2389,7 @@
    }
 
    .hospital h3 {
-     font-size: 15px;
+     font-size: 17px;
    }
 
    .mini-checks {
@@ -2458,15 +2463,24 @@
      padding-bottom: 0px;
    }
 
+   .flexx {
+     width: 100%;
+   }
 
+   .insurance h3 {
+     font-size: 23px;
+   }
 
+   ul li.bb-n {
+     border: none;
+   }
 
 
  }
 
 
 
- @media (max-width: 491px) {
+ @media (max-width: 500px) {
    .container {
      padding: 0 5%;
    }
@@ -2507,6 +2521,53 @@
    .dark-section .BookNowotp {
      grid-template-columns: 1fr;
    }
+
+   .otp-inputs input {
+     width: 50px;
+     height: 50px;
+   }
+
+   .otp-section {
+     width: 100%;
+   }
+
+   .dark-section button.btn-primary {
+     width: 100%;
+   }
+
+   a.btn-primary.gold {
+     width: 100%;
+   }
+
+   .insurance img {
+     width: 80px;
+   }
+
+   .hospital-grid {
+     grid-template-columns: 1fr;
+     gap: 15px;
+
+   }
+
+   .hospital img {
+     height: 280px;
+   }
+
+   .hospital-meta {
+     justify-content: space-between;
+   }
+
+   .mini-checks li {
+     padding: 8px 5px;
+   }
+
+
+
+
+
+
+
+
 
 
 
