@@ -1980,6 +1980,10 @@ header {
     .hero { 
     height: 55vh; 
 }
+
+section.section.cta form.inline-form {
+    width: 100%; 
+}
 }
 
  @media (max-width: 1250px) {
