@@ -115,10 +115,8 @@
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
  }
 
-  
 
- .mainlogo img {
-   height: 40px;
+ .mainlogo img { 
    display: block;
  }
 
@@ -2433,6 +2431,21 @@ span.step-icon img {
    .sticky-action-bar {
      display: block;
    }
+
+   @keyframes ringAnimation {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(14deg); }
+    30% { transform: rotate(-14deg); }
+    45% { transform: rotate(14deg); }
+    60% { transform: rotate(-14deg); }
+    75% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+  .sticky-action-bar i.fa.fa-phone {
+    display: inline-block;
+    animation: ringAnimation 1.5s infinite ease-in-out;
+    transform-origin: center;
+}
 
    .sticky-btn {
      flex: 1;
