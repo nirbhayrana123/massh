@@ -17,124 +17,125 @@
 </head>
 
 <body>
- <header>
-  <div class="container nav">
-    <!-- Left side: Hamburger menu aur Logo -->
-    <div class="nav-left">
-      <!-- Click karne par toggleMenu() call hoga -->
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
+  <header>
+    <div class="container nav">
+      <!-- Left side: Hamburger menu aur Logo -->
+      <div class="nav-left">
+        <!-- Click karne par toggleMenu() call hoga -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars" id="menu-icon"></i>
+        </div>
+        <a href="index.html" class="mainlogo">
+          <img src="image/main-logo.svg" alt="Logo">
+        </a>
       </div>
-      <a href="index.html" class="mainlogo">
-        <img src="image/main-logo.svg" alt="Logo">
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right side: Call Button -->
+      <a class="phone" href="tel:+917290975999">
+        <i class="fa-solid fa-phone"></i> Call +91 7290975999
       </a>
     </div>
-
-    <!-- Desktop Navigation Links -->
-    <nav class="nav-menu" id="navMenu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Right side: Call Button -->
-    <a class="phone" href="tel:+917290975999">
-      <i class="fa-solid fa-phone"></i> Call +91 7290975999
-    </a>
-  </div>
-</header>
+  </header>
   <!-- CONSULTATION POPUP MODAL -->
-<div id="consultationPopup" class="popup-overlay">
+  <div id="consultationPopup" class="popup-overlay">
     <div class="popup-box">
-        <!-- Close Button -->
-        <button class="close-popup" id="closePopup">&times;</button>
-        
-        <!-- Header -->
-        <div class="popup-header">
-            <h2>Book FREE Consultation</h2>
+      <!-- Close Button -->
+      <button class="close-popup" id="closePopup">&times;</button>
+
+      <!-- Header -->
+      <div class="popup-header">
+        <h2>Book FREE Consultation</h2>
+      </div>
+
+      <!-- Content Body -->
+      <div class="popup-content-grid">
+        <!-- Left Side Details -->
+        <div class="popup-left">
+          <h3>Simplifying Surgery Experience</h3>
+          <p class="popup-sub">Consult with our expert surgeon for more than 50+ diseases</p>
+
+          <div class="next-steps">
+            <h4>Next Steps</h4>
+            <div class="step-row">
+              <span class="step-icon"><i class="fa-solid fa-phone"></i></span>
+                <p>Once you share your details, our care coordinator will get in touch with you.</p>
+            </div>
+            <div class="step-row">
+              <span class="step-icon"><i class="fa-solid fa-headphones"></i></span>
+              <p>The coordinator will understand your symptoms and health condition in detail.</p>
+            </div>
+            <div class="step-row">
+              <span class="step-icon"><i class="fa-solid fa-stethoscope"></i></span>
+              <p>Your consultation will be scheduled at the earliest.</p>
+            </div>
+          </div>
+
+          <!-- Stats Footer -->
+          <div class="popup-stats">
+            <div class="stat-card">
+              <strong>3M +</strong>
+              <span>Happy Patients</span>
+            </div>
+            <div class="stat-card">
+              <strong>150 +</strong>
+              <span>Clinics</span>
+            </div>
+            <div class="stat-card">
+              <strong>30 +</strong>
+              <span>Cities</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Content Body -->
-        <div class="popup-content-grid">
-            <!-- Left Side Details -->
-            <div class="popup-left">
-                <h3>Simplifying Surgery Experience</h3>
-                <p class="popup-sub">Consult with our expert surgeon for more than 50+ diseases</p>
-                
-                <div class="next-steps">
-                    <h4>Next Steps</h4>
-                    <div class="step-row">
-                        <span class="step-icon"> <img src="./image/phones.svg"
-</span>
-                        <p>Once you share your details, our care coordinator will get in touch with you.</p>
-                    </div>
-                    <div class="step-row">
-                        <span class="step-icon">💬</span>
-                        <p>The coordinator will understand your symptoms and health condition in detail.</p>
-                    </div>
-                    <div class="step-row">
-                        <span class="step-icon">🩺</span>
-                        <p>Your consultation will be scheduled at the earliest.</p>
-                    </div>
-                </div>
+        <div class="bm"></div>
 
-                <!-- Stats Footer -->
-                <div class="popup-stats">
-                    <div class="stat-card">
-                        <strong>3M +</strong>
-                        <span>Happy Patients</span>
-                    </div>
-                    <div class="stat-card">
-                        <strong>150 +</strong>
-                        <span>Clinics</span>
-                    </div>
-                    <div class="stat-card">
-                        <strong>30 +</strong>
-                        <span>Cities</span>
-                    </div>
-                </div>
+        <!-- Right Side Form -->
+        <div class="popup-right">
+          <form id="popupForm">
+            <div class="input-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Rohan" required>
             </div>
-
-            <!-- Right Side Form -->
-            <div class="popup-right">
-                <form id="popupForm">
-                    <div class="input-group">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Rohan" required>
-                    </div>
-                    <div class="input-group">
-                        <label>Mobile Number</label>
-                        <input type="text" placeholder="+91 9090906565" required>
-                    </div>
-                    <div class="input-group">
-                        <label>Select Location</label>
-                        <select required>
-                            <option value="">Select location</option>
-                            <option value="delhi">Delhi</option>
-                            <option value="noida">Noida</option>
-                            <option value="ludhiana">Ludhiana</option>
-                            <option value="west-delhi">West Delhi</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label>Confirmation Code</label>
-                        <div class="code-boxes">
-                            <input type="text" maxlength="1" value="0">
-                            <input type="text" maxlength="1" value="0">
-                            <input type="text" maxlength="1" value="0">
-                            <input type="text" maxlength="1" value="0">
-                        </div>
-                    </div>
-                    <button type="submit" class="popup-book-btn">Book Now</button>
-                    <p class="privacy-note">🔒 All data is strictly confidential</p>
-                </form>
+            <div class="input-group">
+              <label>Mobile Number</label>
+              <input type="text" placeholder="+91 9090906565" required>
             </div>
+            <div class="input-group">
+              <label>Select Location</label>
+              <select required>
+                <option value="">Select location</option>
+                <option value="delhi">Delhi</option>
+                <option value="noida">Noida</option>
+                <option value="ludhiana">Ludhiana</option>
+                <option value="west-delhi">West Delhi</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Confirmation Code</label>
+              <div class="code-boxes">
+                <input type="text" maxlength="1" value="0">
+                <input type="text" maxlength="1" value="0">
+                <input type="text" maxlength="1" value="0">
+                <input type="text" maxlength="1" value="0">
+              </div>
+            </div>
+            <button type="submit" class="popup-book-btn">Book Now</button>
+            <p class="privacy-note">🔒 All data is strictly confidential</p>
+          </form>
         </div>
+      </div>
     </div>
-</div>
+  </div>
   <main id="top" class="page-wrapper">
     <section class="hero">
       <div class="container hero-wrap">
@@ -169,12 +170,24 @@
     </section>
 
     <div class="features-container top-55">
-      <div class="feature-item"><span class="icon"><img src="image/icon1.png"></span> <p>Shorter<br>operating time</p> </div>
-      <div class="feature-item"><span class="icon"><img src="image/icon2.png"></span> <p>No<br>blood loss</p></div>
-      <div class="feature-item"><span class="icon"><img src="image/icon3.png"></span> <p>No restrictions,<br>no precautions</p></div>
-      <div class="feature-item"><span class="icon"><img src="image/icon4.png"></span> <p>No stitches,<br>no scarring</p> </div>
-      <div class="feature-item"><span class="icon"><img src="image/icon5.png"></span> <p>Normal routine life<br>from the next day </p></div>
-      <div class="feature-item"><span class="icon"><img src="image/icon6.png"></span> <p>Quick<br>recovery</p> </div>
+      <div class="feature-item"><span class="icon"><img src="image/icon1.png"></span>
+        <p>Shorter<br>operating time</p>
+      </div>
+      <div class="feature-item"><span class="icon"><img src="image/icon2.png"></span>
+        <p>No<br>blood loss</p>
+      </div>
+      <div class="feature-item"><span class="icon"><img src="image/icon3.png"></span>
+        <p>No restrictions,<br>no precautions</p>
+      </div>
+      <div class="feature-item"><span class="icon"><img src="image/icon4.png"></span>
+        <p>No stitches,<br>no scarring</p>
+      </div>
+      <div class="feature-item"><span class="icon"><img src="image/icon5.png"></span>
+        <p>Normal routine life<br>from the next day </p>
+      </div>
+      <div class="feature-item"><span class="icon"><img src="image/icon6.png"></span>
+        <p>Quick<br>recovery</p>
+      </div>
     </div>
 
     <section class="section stones">
@@ -273,7 +286,7 @@
           <h2 class="heading">Trusted Network of Super Speciality Hospitals for<br>Advanced Laparoscopic Surgeries</h2>
           <img src="image/line2.png">
         </div>
-        </h2> 
+        </h2>
         <form class="booking-form">
           <div class="BookNowotp">
             <div class="field">
@@ -293,8 +306,8 @@
           </div>
 
           <div class="otp-section">
-            <label>Confirmation Code</label> 
-            <div class="otp-wrapper"> 
+            <label>Confirmation Code</label>
+            <div class="otp-wrapper">
               <div class="otp-inputs">
                 <input type="text" maxlength="1" value="0">
                 <input type="text" maxlength="1" value="0">
@@ -370,7 +383,7 @@
         <div class="heading-lines">
           <h2 class="heading">3D Laparoscopic vs Laparoscopic Cholecystectomy</h2>
           <img src="image/line1.png">
-        </div> 
+        </div>
         <p class="section-lead">Understand the critical advantages of 3D technology over standard laparoscopic
           procedures.</p>
 
@@ -485,7 +498,7 @@
             <h3>MASSH Hospital</h3>
             <div class="place">SOUTH DELHI</div>
             <div class="hospital-meta"><span>150 Beds<br><small>Capacity</small></span>
-              
+
               <div class="rating">
                 <div><img src="image/gg.png"><span class="stars">★★★★★</span></div>
                 <small>Rating</small>
@@ -497,7 +510,7 @@
             <h3>MASSH Hospital</h3>
             <div class="place">WEST DELHI</div>
             <div class="hospital-meta"><span>150 Beds<br><small>Capacity</small></span>
-              
+
               <div class="rating">
                 <div><img src="image/gg.png"><span class="stars">★★★★★</span></div>
                 <small>Rating</small>
@@ -509,7 +522,7 @@
             <h3>MASSH Hospital</h3>
             <div class="place">NOIDA</div>
             <div class="hospital-meta"><span>150 Beds<br><small>Capacity</small></span>
-              
+
               <div class="rating">
                 <div><img src="image/gg.png"><span class="stars">★★★★★</span></div>
                 <small>Rating</small>
@@ -521,7 +534,7 @@
             <h3>MASSH Hospital</h3>
             <div class="place">Delhi</div>
             <div class="hospital-meta"><span>150 Beds<br><small>Capacity</small></span>
-              
+
               <div class="rating">
                 <div><img src="image/gg.png"><span class="stars">★★★★★</span></div>
                 <small>Rating</small>
@@ -585,7 +598,8 @@
           <img src="image/line1.png">
         </div>
 
-        <p class="section-lead">Consult with our board-certified surgeons with decades of collective experience in minimal access surgery.</p>
+        <p class="section-lead">Consult with our board-certified surgeons with decades of collective experience in
+          minimal access surgery.</p>
 
         <div class="doctors">
 
@@ -621,7 +635,7 @@
 
               <p class="credentials">
                 <i class="fa-solid fa-graduation-cap"></i>
-                 MBBS, MD, MS (General Surgery) 
+                MBBS, MD, MS (General Surgery)
               </p>
             </div>
             <p class="description">Dr. Sachin Ambekar is a distinguished surgeon with over 24 years of experience,
@@ -663,7 +677,7 @@
 
               <p class="credentials">
                 <i class="fa-solid fa-graduation-cap"></i>
-                 MBBS, MD, DNB, FMAS, SAGES Member 
+                MBBS, MD, DNB, FMAS, SAGES Member
               </p>
             </div>
             <p class="description">Dr. jolly is a highly qualified surgeon with a deep understanding of the importance
@@ -731,47 +745,47 @@
           </div>
         </div>
 
-      <!-- Video Gallery Row -->
-  <div class="video-row">
-    <!-- Har box me 'data-video' attribute me YouTube video ki ID set karein -->
-    <div class="videobox" data-video="dQw4w9WgXcQ">
-      <span><i class="fa fa-play" aria-hidden="true"></i></span>
-      <img src="image/video-img.png" alt="Video 1">
-    </div>
+        <!-- Video Gallery Row -->
+        <div class="video-row">
+          <!-- Har box me 'data-video' attribute me YouTube video ki ID set karein -->
+          <div class="videobox" data-video="dQw4w9WgXcQ">
+            <span><i class="fa fa-play" aria-hidden="true"></i></span>
+            <img src="image/video-img.png" alt="Video 1">
+          </div>
 
-    <div class="videobox" data-video="dQw4w9WgXcQ">
-      <span><i class="fa fa-play" aria-hidden="true"></i></span>
-      <img src="image/video-img.png" alt="Video 2">
-    </div>
+          <div class="videobox" data-video="dQw4w9WgXcQ">
+            <span><i class="fa fa-play" aria-hidden="true"></i></span>
+            <img src="image/video-img.png" alt="Video 2">
+          </div>
 
-    <div class="videobox" data-video="dQw4w9WgXcQ">
-      <span><i class="fa fa-play" aria-hidden="true"></i></span>
-      <img src="image/video-img.png" alt="Video 3">
-    </div>
+          <div class="videobox" data-video="dQw4w9WgXcQ">
+            <span><i class="fa fa-play" aria-hidden="true"></i></span>
+            <img src="image/video-img.png" alt="Video 3">
+          </div>
 
-    <div class="videobox" data-video="dQw4w9WgXcQ">
-      <span><i class="fa fa-play" aria-hidden="true"></i></span>
-      <img src="image/video-img.png" alt="Video 4">
-    </div>
+          <div class="videobox" data-video="dQw4w9WgXcQ">
+            <span><i class="fa fa-play" aria-hidden="true"></i></span>
+            <img src="image/video-img.png" alt="Video 4">
+          </div>
 
-    <div class="videobox" data-video="dQw4w9WgXcQ">
-      <span><i class="fa fa-play" aria-hidden="true"></i></span>
-      <img src="image/video-img.png" alt="Video 5">
-    </div>
+          <div class="videobox" data-video="dQw4w9WgXcQ">
+            <span><i class="fa fa-play" aria-hidden="true"></i></span>
+            <img src="image/video-img.png" alt="Video 5">
+          </div>
 
-    <div class="videobox" data-video="dQw4w9WgXcQ">
-      <span><i class="fa fa-play" aria-hidden="true"></i></span>
-      <img src="image/video-img.png" alt="Video 6">
-    </div>
-  </div>
+          <div class="videobox" data-video="dQw4w9WgXcQ">
+            <span><i class="fa fa-play" aria-hidden="true"></i></span>
+            <img src="image/video-img.png" alt="Video 6">
+          </div>
+        </div>
 
-  <!-- Video Modal Structure -->
-  <div id="videoModal" class="video-modal">
-    <div class="modal-content">
-      <span class="close-btn">×</span>
-      <iframe id="videoPlayer" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-  </div>
+        <!-- Video Modal Structure -->
+        <div id="videoModal" class="video-modal">
+          <div class="modal-content">
+            <span class="close-btn">×</span>
+            <iframe id="videoPlayer" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
 
         <div class="canterr">
           <div class="review-badge">
@@ -794,7 +808,7 @@
               <div class="review-title">Google Reviews</div>
               <div class="review-rating">
                 <span class="score">4.9</span>
-                <span class="stars">★★★★★</span> 
+                <span class="stars">★★★★★</span>
               </div>
               <div class="review-count">Based on 173 reviews</div>
             </div>
@@ -854,8 +868,10 @@
           <img src="image/line3.png">
         </div>
 
-        <p>Get expert care and advanced, minimally invasive treatment options for gallbladder stone removal at MASSH Super 
-          </br> Speciality Hospital. Consult top specialists today for personalized guidance, transparent advice, and a hassle-free surgical</br> recovery.</p>
+        <p>Get expert care and advanced, minimally invasive treatment options for gallbladder stone removal at MASSH
+          Super
+          </br> Speciality Hospital. Consult top specialists today for personalized guidance, transparent advice, and a
+          hassle-free surgical</br> recovery.</p>
         <form class="inline-form">
           <div class="field"><label>Full Name</label><input placeholder="Enter your full name"></div>
           <div class="field"><label>Mobile Number</label><input placeholder="Enter mobile number"></div>
@@ -1011,7 +1027,7 @@
     <div class="sticky-container">
       <a href="tel:+919311188888" class="sticky-btn call-btn-action">
         <span><i class="fa fa-phone" aria-hidden="true"></i>
-</span> Call Now
+        </span> Call Now
       </a>
       <a href="#top" class="sticky-btn book-btn-action">
         Book Appointment
@@ -1054,43 +1070,43 @@
 
 
 <!-- JavaScript Script -->
-  <script>
-    const modal = document.getElementById('videoModal');
-    const player = document.getElementById('videoPlayer');
-    const closeBtn = document.querySelector('.close-btn');
-    const videoBoxes = document.querySelectorAll('.videobox');
+<script>
+  const modal = document.getElementById('videoModal');
+  const player = document.getElementById('videoPlayer');
+  const closeBtn = document.querySelector('.close-btn');
+  const videoBoxes = document.querySelectorAll('.videobox');
 
-    // Har videobox par click listener lagana
-    videoBoxes.forEach(box => {
-      box.addEventListener('click', function() {
-        // 'data-video' se YouTube Video ID nikalna
-        const videoId = this.getAttribute('data-video');
-        
-        // YouTube embed URL autoplay ke sath set karna
-        player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-        
-        // Modal open karna
-        modal.style.display = 'flex';
-      });
+  // Har videobox par click listener lagana
+  videoBoxes.forEach(box => {
+    box.addEventListener('click', function () {
+      // 'data-video' se YouTube Video ID nikalna
+      const videoId = this.getAttribute('data-video');
+
+      // YouTube embed URL autoplay ke sath set karna
+      player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+      // Modal open karna
+      modal.style.display = 'flex';
     });
+  });
 
-    // Close Button par click karne se popup band aur video stop hona
-    closeBtn.addEventListener('click', closeModal);
+  // Close Button par click karne se popup band aur video stop hona
+  closeBtn.addEventListener('click', closeModal);
 
-    // Dark Background par click karne par popup band hona
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-
-    // Modal close karne aur video off karne ka function
-    function closeModal() {
-      modal.style.display = 'none';
-      player.src = ''; // src empty karne se video play hona band ho jata hai
+  // Dark Background par click karne par popup band hona
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      closeModal();
     }
+  });
 
- 
+  // Modal close karne aur video off karne ka function
+  function closeModal() {
+    modal.style.display = 'none';
+    player.src = ''; // src empty karne se video play hona band ho jata hai
+  }
+
+
   function toggleMenu() {
     var menu = document.getElementById("navMenu");
     var icon = document.getElementById("menu-icon");
@@ -1106,34 +1122,34 @@
       icon.classList.remove("fa-xmark");
       icon.classList.add("fa-bars");
     }
-  } 
+  }
 
 
- document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("consultationPopup");
     const closeBtn = document.getElementById("closePopup");
 
     // Page load hone par smooth animation ke sath popup khulne ke liye 'active' class add karein
-    setTimeout(function() {
-        popup.classList.add("active");
+    setTimeout(function () {
+      popup.classList.add("active");
     }, 100); // 100ms ka chota delay taki page load hote hi smooth transition dikhe
 
     // Close button par click karne se popup band ho jayega
     closeBtn.addEventListener("click", function () {
-        popup.classList.remove("active");
+      popup.classList.remove("active");
     });
 
     // Bahar black overlay par click karne se bhi popup band ho jayega
     window.addEventListener("click", function (event) {
-        if (event.target === popup) {
-            popup.classList.remove("active");
-        }
+      if (event.target === popup) {
+        popup.classList.remove("active");
+      }
     });
-});
+  });
 
 
 
-  </script>
+</script>
 
 
 </html>
