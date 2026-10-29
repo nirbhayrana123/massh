@@ -2594,7 +2594,9 @@
    .badge {
      padding: 6px 15px 6px 55px;
    }
-
+.popup-overlay { 
+    top: 0px; 
+}
    .features-container {
      margin: auto;
    }
