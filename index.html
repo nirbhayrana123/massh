@@ -67,7 +67,8 @@
                 <div class="next-steps">
                     <h4>Next Steps</h4>
                     <div class="step-row">
-                        <span class="step-icon">📞</span>
+                        <span class="step-icon"> <img src="./image/phones.svg"
+</span>
                         <p>Once you share your details, our care coordinator will get in touch with you.</p>
                     </div>
                     <div class="step-row">
@@ -1108,26 +1109,30 @@
   } 
 
 
-  document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("consultationPopup");
     const closeBtn = document.getElementById("closePopup");
 
-    // Page load hone par popup automatically show karega
-    // Agar aap chahte hain ki sirf ek baar khule, toh localStorage use kar sakte hain
-    popup.style.display = "flex";
+    // Page load hone par smooth animation ke sath popup khulne ke liye 'active' class add karein
+    setTimeout(function() {
+        popup.classList.add("active");
+    }, 100); // 100ms ka chota delay taki page load hote hi smooth transition dikhe
 
-    // Close button par click karne se popup hide ho jayega
+    // Close button par click karne se popup band ho jayega
     closeBtn.addEventListener("click", function () {
-        popup.style.display = "none";
+        popup.classList.remove("active");
     });
 
     // Bahar black overlay par click karne se bhi popup band ho jayega
     window.addEventListener("click", function (event) {
         if (event.target === popup) {
-            popup.style.display = "none";
+            popup.classList.remove("active");
         }
     });
 });
+
+
+
   </script>
 
 
