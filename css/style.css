@@ -260,26 +260,24 @@
    border-color: #005a43;
    box-shadow: 0 0 0 2px rgba(0, 90, 67, 0.15);
  }
-
- /* India Flag & +91 Fixed Box */
- .country-prefix {
-   background-color: #f4f6f5;
-   padding: 10px 12px;
-   font-size: 14px;
-   font-weight: 600;
-   color: #333;
-   border-right: 1px solid #d5dad6;
-   display: flex;
-   align-items: center;
-   gap: 6px;
-   white-space: nowrap;
- }
+.country-prefix {
+    background-color: #f4f6f5;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    border-right: 1px solid #d5dad6;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    height: 100%;
+}
 
  input[type="tel"] {
    outline: none;
  }
-
- /* Input field inside wrapper */
+ 
  .phone-input-wrapper input {
    border: none !important;
    outline: none !important;
@@ -1829,7 +1827,7 @@
    }
  }
 
- .phone i {
+ i.fa-solid.fa-phone {
    padding-right: 5px;
    display: inline-block;
    animation: ringAnimation 1.5s infinite ease-in-out;
@@ -2940,7 +2938,9 @@
    .hospital img {
      height: 120px;
    }
-
+.thankyou-card { 
+    max-width: 90%; 
+}
    .hospital h3 {
      font-size: 17px;
    }
@@ -3218,7 +3218,16 @@
      font-size: 25px;
    }
 
-
+.thankyou-card { 
+    padding: 20px; 
+}
+.details-box { 
+    padding: 13px; 
+}
+.action-buttons { 
+    gap: 10px; 
+    flex-direction: column;
+}
  }
 
  @media (max-width: 376px) {
