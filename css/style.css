@@ -44,8 +44,8 @@
  }
 
  p {
-   color:  rgba(102, 102, 102, 1);
-;
+   color: rgba(102, 102, 102, 1);
+   ;
    font-size: 16px;
    font-family: 'DM Sans', sans-serif;
 
@@ -389,16 +389,16 @@
    margin-top: -55px;
  }
 
-.location  {
-    margin-bottom: 10px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 500;
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+ .location {
+   margin-bottom: 10px;
+   border-radius: 999px;
+   font-size: 12px;
+   font-weight: 500;
+   position: relative;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
 
  .locations span.location {
    border: 1px solid var(--white);
@@ -1209,14 +1209,15 @@
    position: relative;
  }
 
- ul.point2::after {
-   content: "";
-   width: 1px;
-   position: absolute;
-   top: 22%;
-   bottom: 22%;
-   background-color: #ccc;
- }
+ul.point2::after {
+    content: "";
+    width: 1px;
+    position: absolute;
+    top: 22%;
+    bottom: 22%;
+    background-color: #ccc;
+    right: -20px;
+}
 
  .doctor .button-row a.btn-primary {
    font-size: 14px;
@@ -1240,14 +1241,15 @@
    margin-left: 7px;
  }
 
- ul.point2::before {
-   content: "";
-   width: 1px;
-   position: absolute;
-   top: 22%;
-   bottom: 22%;
-   background-color: #ccc;
- }
+ul.point2::before {
+    content: "";
+    width: 1px;
+    position: absolute;
+    top: 22%;
+    bottom: 22%;
+    background-color: #ccc;
+    left: -16px;
+}
 
  .mini-checks li {
    padding: 6px 5px;
@@ -1395,19 +1397,19 @@
  }
 
  .doctor .stats b {
-    display: block;
-    font-family: DM Sans;
-    font-weight: 600;
-    font-size: 18px;
-    vertical-align: bottom;
-    color: rgba(56, 56, 56, 1);
-}
+   display: block;
+   font-family: DM Sans;
+   font-weight: 600;
+   font-size: 18px;
+   vertical-align: bottom;
+   color: rgba(56, 56, 56, 1);
+ }
 
  .doctor p {
-    font-size: 14px;
-    color: var(--black);
-    margin-bottom: 0px;
-}
+   font-size: 14px;
+   color: var(--black);
+   margin-bottom: 0px;
+ }
 
  .doctor p.description {
    min-height: 70px;
@@ -1670,7 +1672,7 @@
  .cta .inline-form {
    background: #004d3a;
    color: var(--white);
-   border: 3px solid rgb(191 238 229 / 32%);
+   border: 3px solid rgb(191 238 229 / 47%);
    text-align: left;
  }
 
@@ -1922,31 +1924,18 @@
 
  .sticky-action-bar {
    position: fixed;
-   bottom: 0;
+   bottom: -2px;
    left: 0;
    width: 100%;
-   background-color: #ffffff;
-   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
    z-index: 1000;
-   padding: 12px 16px;
-   border-top: 1px solid #d5e2dc;
-   display: none;
- }
-
- .sticky-container {
-   max-width: 600px;
-   margin: 0 auto;
-   display: flex;
-   gap: 12px;
- }
+ } 
 
  .sticky-btn {
    flex: 1;
    padding: 14px 20px;
-   border-radius: 8px;
    text-align: center;
    text-decoration: none;
-   font-weight: 700;
+   font-weight: 600;
    font-size: 15px;
    display: inline-flex;
    align-items: center;
@@ -1958,17 +1947,24 @@
  .call-btn-action {
    background-color: #ffffff;
    color: #005a43;
-   border: 2px solid #005a43;
  }
 
  .call-btn-action:hover {
    background-color: #EAF4F0;
  }
 
+ .sticky-container {
+   margin: 0 auto;
+   overflow: hidden;
+   border-radius: 10px 10px 0 0;
+   border: 2px solid #fff;
+   display: none;
+   width: 90%;
+ }
+
  .book-btn-action {
    background-color: #005a43;
    color: #ffffff;
-   border: 2px solid #005a43;
  }
 
  .book-btn-action:hover {
@@ -2342,10 +2338,10 @@
      font-size: 17px;
    }
 
-      .advisor h2 {
-        font-size: 24px;
-        font-weight: 400;
-    }
+   .advisor h2 {
+     font-size: 24px;
+     font-weight: 400;
+   }
 
    section.section.cta form.inline-form {
      width: 100%;
@@ -2373,6 +2369,10 @@
      z-index: 1000;
    }
 
+   .sticky-container {
+     display: flex;
+   }
+
    .nav-menu.active {
      display: block;
      height: 100vh;
@@ -2390,6 +2390,10 @@
 
    .nav-menu ul li a {
      display: block;
+   }
+
+   footer {
+     padding-bottom: 70px;
    }
 
    .whatsapp-float {
@@ -2573,10 +2577,11 @@
    .form-card {
      padding: 21px;
    }
-    .features-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0px;
-    }
+
+   .features-container {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 0px;
+   }
 
    .intro,
    .risk {
@@ -2691,23 +2696,34 @@
    .flexx {
      width: 100%;
    }
+
    .hospital img.direction {
-    width: 40px; 
-    margin-top: 18px;
-    left: 160px;
-}
+     width: 40px;
+     margin-top: 18px;
+     left: 160px;
+   }
 
    .insurance h3 {
      font-size: 18px;
      margin-bottom: 10px;
    }
-.insurance p {
-    font-size: 14px;
-}
+
+   .insurance p {
+     font-size: 14px;
+   }
+
    ul li.bb-n {
      border: none;
    }
 
+   ul.point2::after,
+   ul.point2::before {
+     display: none;
+   }
+
+   section.section.faq img {
+     display: none;
+   }
 
  }
 
@@ -2717,9 +2733,11 @@
    .container {
      padding: 0 5%;
    }
-.doctor .stats { 
-    flex-wrap: wrap;
-}
+
+   .doctor .stats {
+     flex-wrap: wrap;
+   }
+
    a.mainlogo {
      width: 190px;
    }
@@ -2770,9 +2788,9 @@
      width: 100%;
    }
 
-      a.btn-primary.gold {
-        width: 50%;
-    }
+   a.btn-primary.gold {
+     width: 100%;
+   }
 
    .insurance img {
      width: 80px;
@@ -2785,8 +2803,8 @@
    }
 
    .hospital img {
-        height: 200px;
-    }
+     height: 200px;
+   }
 
    .hospital-meta {
      justify-content: space-between;
@@ -2802,7 +2820,7 @@
 
    .videobox {
      height: 260px;
-     ;
+
    }
 
    .review-badge {
@@ -2838,10 +2856,117 @@
      padding: 40px 0;
    }
 
-    .heading {
-        font-size: 23px;
-    }
+   .heading {
+     font-size: 23px;
+   }
 
+   a.mainlogo {
+     width: 120px;
+   }
+
+   .form-card h3 {
+     font-size: 20px;
+   }
+
+   section.hero .form-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 10px;
+   }
+
+   section.hero .form-grid>*:nth-child(3),
+   section.hero .form-grid>*:nth-child(4) {
+     grid-column: 1 / -1;
+   }
+
+   .symptoms {
+     margin-bottom: 35px;
+   }
+
+   section.symptoms-section {
+     padding: 40px 0;
+   }
+
+   .risk-list div {
+     padding: 3px 10px;
+   }
+
+   section {
+     padding: 40px 0;
+   }
+
+   .surgery-compare .sc-title {
+     font-size: 18px;
+   }
+
+   .mini-checks {
+     padding: 15px;
+   }
+
+   .advisor h2 {
+     font-size: 25px;
+   }
+
+
+
+ }
+
+ @media (max-width: 376px) {
+
+   .form-card {
+     padding: 15px;
+   }
+
+   .mini-checks li {
+     font-size: 14px;
+   }
+
+   .video-row {
+     grid-template-columns: repeat(2, 1fr);
+   }
+
+   p.question {
+     font-size: 13px;
+     gap: 8px;
+   }
+
+   .faq-item .icon {
+     width: 20px;
+     height: 20px;
+   }
+
+   .faq-item {
+     padding: 12px;
+   }
+
+   section.section.faq .left {
+     margin-bottom: 5px;
+   }
+
+   .videobox {
+     height: 200px;
+   }
+
+   .otp-inputs {
+     gap: 3px;
+   }
+
+   .otp-inputs input {
+     width: 40px;
+     height: 40px;
+   }
+
+
+   .booking-form {
+     padding: 15px;
+   }
+
+   .otp-wrapper {
+     gap: 10px;
+   }
+.sticky-btn { 
+    font-size: 13px; 
+}
 
 
  }
