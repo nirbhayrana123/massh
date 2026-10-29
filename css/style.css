@@ -17,10 +17,11 @@
    scroll-behavior: smooth;
  }
 
-.page-wrapper {
-    overflow: hidden;
-    padding-top: 79px;
-}
+ .page-wrapper {
+   overflow: hidden;
+   padding-top: 79px;
+ }
+
  body {
    margin: 0;
    color: var(--black);
@@ -120,19 +121,7 @@
    display: block;
  }
 
- .phone {
-   background-color: #007664;
-   color: #ffffff;
-   padding: 8px 16px;
-   border-radius: 50px;
-   text-decoration: none;
-   font-size: 14px;
-   font-weight: 500;
-   display: flex;
-   align-items: center;
-   gap: 8px;
-   white-space: nowrap;
- }
+
 
  /**************menu hambargur**********************/
 
@@ -194,7 +183,7 @@
    font-size: 12px;
    color: var(--gry);
  }
- 
+
  .header {
    position: fixed;
    top: 0;
@@ -205,15 +194,16 @@
    box-shadow: 0 3px 15px rgba(0, 0, 0, .07);
    display: flex;
    align-items: center;
-   justify-content: space-between; 
+   justify-content: space-between;
    transition: transform 0.3s ease-in-out;
    z-index: 1000;
  }
-.header .container.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
+ .header .container.nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
 
  .header.hideheader {
    transform: translateY(-100%);
@@ -262,13 +252,13 @@
    margin-top: 4px;
  }
 
- .phone {
-   background: var(--green);
-   color: var(--white);
-   border-radius: 999px;
+ a.btn-primary.phone {
    padding: 11px 18px;
-   font-weight: 500;
    font-size: 14px;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   border-radius: 52px;
  }
 
  .hero {
@@ -760,9 +750,30 @@
    font-size: 16px;
    font-weight: 600;
    border-radius: 8px;
-   transition: 0.7s;
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 2;
  }
-
+ 
+ .btn-primary::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 0%;
+   background-color: rgba(255, 167, 0, 1);
+   transition: height 0.4s ease-in-out;
+   z-index: -1;
+ }
+ 
+ .btn-primary:hover::after {
+   height: 100%;
+ }
 
  .confidential-text {
    text-align: center;
@@ -1710,29 +1721,48 @@
    font-family: 'Fraunces', serif;
    font-size: 16px;
  }
- @keyframes ringAnimation {
-    0% { transform: rotate(0deg); }
-    15% { transform: rotate(14deg); }
-    30% { transform: rotate(-14deg); }
-    45% { transform: rotate(14deg); }
-    60% { transform: rotate(-14deg); }
-    75% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-}
- .phone i {
-    padding-right: 5px;
-    display: inline-block;
-    animation: ringAnimation 1.5s infinite ease-in-out;
-    transform-origin: center;
-}
 
-a.btn-primary.gold:hover {
-    background-color: #fff;
-}
-a:hover {
-    background-color: rgba(255, 167, 0, 1);
-    transition: 0.7s;
-}
+ @keyframes ringAnimation {
+   0% {
+     transform: rotate(0deg);
+   }
+
+   15% {
+     transform: rotate(14deg);
+   }
+
+   30% {
+     transform: rotate(-14deg);
+   }
+
+   45% {
+     transform: rotate(14deg);
+   }
+
+   60% {
+     transform: rotate(-14deg);
+   }
+
+   75% {
+     transform: rotate(0deg);
+   }
+
+   100% {
+     transform: rotate(0deg);
+   }
+ }
+
+ .phone i {
+   padding-right: 5px;
+   display: inline-block;
+   animation: ringAnimation 1.5s infinite ease-in-out;
+   transform-origin: center;
+ }
+
+ a.btn-primary.gold:hover {
+   background-color: #fff;
+ }
+
 
  .faq-item .icon {
    font-size: 16px;
@@ -1967,23 +1997,23 @@ a:hover {
    background-color: #004231;
  }
 
-.popup-overlay {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0 0 0 / 81%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999999;
-    padding: 15px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
-    backdrop-filter: blur(4px);
-    cursor: pointer;
-}
+ .popup-overlay {
+   position: fixed;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(0 0 0 / 81%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 999999;
+   padding: 15px;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.4s ease, visibility 0.4s ease;
+   backdrop-filter: blur(4px);
+   cursor: pointer;
+ }
 
  span.step-icon i {
    font-size: 22px;
@@ -2024,7 +2054,7 @@ a:hover {
  }
 
  .popup-header {
-   background-color: rgba(22, 135, 114, 1);
+   background-color: var(--green);
    text-align: center;
    padding: 18px;
  }
@@ -2153,22 +2183,8 @@ a:hover {
    width: 50px;
  }
 
- .popup-book-btn {
+ .popup-right button.btn-primary {
    width: 100%;
-   background-color: var(--green);
-   color: var(--white);
-   border: none;
-   padding: 12px;
-   border-radius: 6px;
-   font-size: 15px;
-   font-weight: bold;
-   cursor: pointer;
-   margin-top: 10px;
-   transition: background 0.2s;
- }
-
- .popup-book-btn:hover {
-   background-color: var(--green);
  }
 
  .privacy-note {
@@ -2641,12 +2657,6 @@ a:hover {
 
    .brand-copy {
      font-size: 12px;
-   }
-
-   .phone {
-     font-size: 12px;
-     padding: 9px 12px;
-     gap: 0;
    }
 
    .hero h1 {
