@@ -46,7 +46,94 @@
     </a>
   </div>
 </header>
+  <!-- CONSULTATION POPUP MODAL -->
+<div id="consultationPopup" class="popup-overlay">
+    <div class="popup-box">
+        <!-- Close Button -->
+        <button class="close-popup" id="closePopup">&times;</button>
+        
+        <!-- Header -->
+        <div class="popup-header">
+            <h2>Book FREE Consultation</h2>
+        </div>
 
+        <!-- Content Body -->
+        <div class="popup-content-grid">
+            <!-- Left Side Details -->
+            <div class="popup-left">
+                <h3>Simplifying Surgery Experience</h3>
+                <p class="popup-sub">Consult with our expert surgeon for more than 50+ diseases</p>
+                
+                <div class="next-steps">
+                    <h4>Next Steps</h4>
+                    <div class="step-row">
+                        <span class="step-icon">📞</span>
+                        <p>Once you share your details, our care coordinator will get in touch with you.</p>
+                    </div>
+                    <div class="step-row">
+                        <span class="step-icon">💬</span>
+                        <p>The coordinator will understand your symptoms and health condition in detail.</p>
+                    </div>
+                    <div class="step-row">
+                        <span class="step-icon">🩺</span>
+                        <p>Your consultation will be scheduled at the earliest.</p>
+                    </div>
+                </div>
+
+                <!-- Stats Footer -->
+                <div class="popup-stats">
+                    <div class="stat-card">
+                        <strong>3M +</strong>
+                        <span>Happy Patients</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>150 +</strong>
+                        <span>Clinics</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>30 +</strong>
+                        <span>Cities</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Form -->
+            <div class="popup-right">
+                <form id="popupForm">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Rohan" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Mobile Number</label>
+                        <input type="text" placeholder="+91 9090906565" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Select Location</label>
+                        <select required>
+                            <option value="">Select location</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="noida">Noida</option>
+                            <option value="ludhiana">Ludhiana</option>
+                            <option value="west-delhi">West Delhi</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Confirmation Code</label>
+                        <div class="code-boxes">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                        </div>
+                    </div>
+                    <button type="submit" class="popup-book-btn">Book Now</button>
+                    <p class="privacy-note">🔒 All data is strictly confidential</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
   <main id="top" class="page-wrapper">
     <section class="hero">
       <div class="container hero-wrap">
@@ -1018,6 +1105,28 @@
       icon.classList.add("fa-bars");
     }
   } 
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("consultationPopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    // Page load hone par popup automatically show karega
+    // Agar aap chahte hain ki sirf ek baar khule, toh localStorage use kar sakte hain
+    popup.style.display = "flex";
+
+    // Close button par click karne se popup hide ho jayega
+    closeBtn.addEventListener("click", function () {
+        popup.style.display = "none";
+    });
+
+    // Bahar black overlay par click karne se bhi popup band ho jayega
+    window.addEventListener("click", function (event) {
+        if (event.target === popup) {
+            popup.style.display = "none";
+        }
+    });
+});
   </script>
 
 
