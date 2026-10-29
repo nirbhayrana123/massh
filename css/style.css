@@ -110,45 +110,12 @@
  /***********************menu hambugar*****************/
 
  header {
-   background-color: #ffffff;
-   padding: 10px 0;
+   background-color: #ffffff; 
    position: relative;
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
  }
 
- .container.nav {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
- }
-
- .nav-left {
-   display: flex;
-   align-items: center;
-   gap: 15px;
- }
-
- /* Desktop Menu Links */
- .nav-menu ul {
-   display: flex;
-   list-style: none;
-   gap: 20px;
-   margin: 0;
-   padding: 0;
- }
-
- .nav-menu a {
-   text-decoration: none;
-   color: #333;
-   font-weight: 500;
- }
-
- .menu-toggle {
-   display: none;
-   font-size: 22px;
-   color: #007664;
-   cursor: pointer;
- }
+  
 
  .mainlogo img {
    height: 40px;
