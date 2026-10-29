@@ -1697,10 +1697,29 @@
    font-family: 'Fraunces', serif;
    font-size: 16px;
  }
-
+ @keyframes ringAnimation {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(14deg); }
+    30% { transform: rotate(-14deg); }
+    45% { transform: rotate(14deg); }
+    60% { transform: rotate(-14deg); }
+    75% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
  .phone i {
-   padding-right: 5px;
- }
+    padding-right: 5px;
+    display: inline-block;
+    animation: ringAnimation 1.5s infinite ease-in-out;
+    transform-origin: center;
+}
+
+a.btn-primary.gold:hover {
+    background-color: #fff;
+}
+a:hover {
+    background-color: rgba(255, 167, 0, 1);
+    transition: 0.7s;
+}
 
  .faq-item .icon {
    font-size: 16px;
