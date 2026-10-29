@@ -1992,8 +1992,8 @@
  }
 
  span.step-icon i {
-    font-size: 22px;
-}
+   font-size: 22px;
+ }
 
  .popup-overlay.active {
    opacity: 1;
@@ -2013,23 +2013,20 @@
    overflow: hidden;
    position: relative;
    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-   transform: translateY(-50px);
-   /* Shuru me thoda upar rahega */
+   transform: translateY(-50px); 
    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
  }
-
- /* Close Button */
- .close-popup {
-   position: absolute;
-   top: 1px;
-   right: 20px;
-   background: none;
-   border: none;
-   font-size: 35px;
-   color: #ffffff;
-   cursor: pointer;
-   z-index: 10;
- }
+.close-popup {
+    position: absolute;
+    top: -18px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 60px;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 10;
+}
 
  .popup-header {
    background-color: rgba(22, 135, 114, 1);
@@ -2062,7 +2059,7 @@
 
  .popup-left h3 {
    font-size: 24px;
-   color: #111;
+    color: var(--black);
    margin-bottom: 8px;
  }
 
@@ -2072,12 +2069,11 @@
    margin-bottom: 40px;
  }
 
- .next-steps h4 {
-   font-size: 14px;
-   color: #222;
-   margin-bottom: 12px;
- }
-
+.next-steps h4 {
+    font-size: 15px;
+    color: var(--black);
+    margin-bottom: 18px;
+}
  .step-row {
    display: flex;
    gap: 12px;
@@ -2094,27 +2090,31 @@
    line-height: 17px;
    letter-spacing: 0%;
  }
- 
+span.step-icon img {
+    width: 22px;
+}
  .popup-stats {
-   display: flex;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
    gap: 15px;
    margin-top: 40px;
    background: #ffffff;
-   padding: 15px;
+   padding: 10px;
    border-radius: 8px;
    border: 1px solid #eae5df;
  }
 
-.stat-card {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
- .stat-card strong {
-   font-size: 18px;
-   color: #000000;
+ .stat-card {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
  }
 
+.stat-card strong {
+    font-size: 27px;
+    color: #3d3d3d;
+    font-family: Fraunces;
+}
  .stat-card span {
    font-size: 11px;
    color: #666;
@@ -2140,7 +2140,7 @@
    border: 1px solid #d5dad6;
    border-radius: 6px;
    font-size: 14px;
-   background-color: #ffffff;
+   background-color: var(--white);
  }
 
  .code-boxes {
@@ -2156,8 +2156,8 @@
 
  .popup-book-btn {
    width: 100%;
-   background-color: #005a43;
-   color: #ffffff;
+   background-color: var(--green);
+   color: var(--white);
    border: none;
    padding: 12px;
    border-radius: 6px;
@@ -2169,7 +2169,7 @@
  }
 
  .popup-book-btn:hover {
-   background-color: #004231;
+   background-color: var(--green);
  }
 
  .privacy-note {
@@ -2188,7 +2188,10 @@
    color: rgba(255, 255, 255, 1);
  }
 
- /* Responsive Mobile view */
+  .privacy-note i.fa-solid.fa-lock {
+    color: rgba(22, 135, 114, 1);
+    padding-right: 5px;
+}
  @media (max-width: 768px) {
    .popup-content-grid {
      grid-template-columns: 1fr;
