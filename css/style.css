@@ -1725,12 +1725,14 @@
     animation: ringAnimation 1.5s infinite ease-in-out;
     transform-origin: center;
 }
-
+button.btn-primary:hover {
+    background-color: #198171a8;
+}
 a.btn-primary.gold:hover {
     background-color: #fff;
 }
 a:hover {
-    background-color: rgba(255, 167, 0, 1);
+    background-color: #198171a8;
     transition: 0.7s;
 }
 
@@ -2583,7 +2585,9 @@ a:hover {
    .badge {
      padding: 6px 15px 6px 55px;
    }
-
+.popup-overlay { 
+    top: 0px; 
+}
    .features-container {
      margin: auto;
    }
