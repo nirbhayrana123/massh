@@ -16,8 +16,8 @@
     rel="stylesheet">
 </head>
 
-<body>
-  <header>
+<body id="book-free">
+  <header class="header">
     <div class="container nav"> 
       <div class="nav-left">  
         <a href="index.html" class="mainlogo">
@@ -110,7 +110,8 @@
       </div>
     </div>
   </div>
-  <main id="top" class="page-wrapper">
+
+  <main id="top"  class="page-wrapper">
     <section class="hero">
       <div class="container hero-wrap">
         <div><span class="badge"><img src="image/banner-2.png"> NABH Accredited Hospital</span>
@@ -185,7 +186,7 @@
 
 
       <div class="leftsidebt">
-        <a class="btn-primary" href="#consult">Book Appointment</a>
+        <a class="btn-primary" href="#book-free">Book Appointment</a>
       </div>
     </section>
 
@@ -1082,18 +1083,17 @@
   document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("consultationPopup");
     const closeBtn = document.getElementById("closePopup");
-
-    // Page load hone par smooth animation ke sath popup khulne ke liye 'active' class add karein
+ 
     setTimeout(function () {
       popup.classList.add("active");
-    }, 100); // 100ms ka chota delay taki page load hote hi smooth transition dikhe
+    }, 500);  
 
-    // Close button par click karne se popup band ho jayega
+    
     closeBtn.addEventListener("click", function () {
       popup.classList.remove("active");
     });
 
-    // Bahar black overlay par click karne se bhi popup band ho jayega
+ 
     window.addEventListener("click", function (event) {
       if (event.target === popup) {
         popup.classList.remove("active");
@@ -1106,4 +1106,24 @@
 </script>
 
 
+
+
+<script>
+  let lastScrollTop = 0;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop && currentScroll > 100) {
+    
+    header.classList.add('hideheader');
+  } else {
+    
+    header.classList.remove('hideheader');
+  }
+  
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Negative scroll handle karne ke liye
+});
+</script>
 </html>
