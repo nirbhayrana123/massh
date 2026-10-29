@@ -251,49 +251,52 @@
    font-size: 9px;
    margin-top: 4px;
  }
- 
-/* Mobile Number Prefix Wrapper */
-.phone-input-wrapper {
-    display: flex;
-    align-items: center;
-    border: 1px solid #d5dad6;
-    border-radius: 6px;
-    background-color: #ffffff;
-    overflow: hidden;
-    width: 100%;
-}
 
-.phone-input-wrapper:focus-within {
-    border-color: #005a43;
-    box-shadow: 0 0 0 2px rgba(0, 90, 67, 0.15);
-}
+ /* Mobile Number Prefix Wrapper */
+ .phone-input-wrapper {
+   display: flex;
+   align-items: center;
+   border: 1px solid #d5dad6;
+   border-radius: 6px;
+   background-color: #ffffff;
+   overflow: hidden;
+   width: 100%;
+ }
 
-/* India Flag & +91 Fixed Box */
-.country-prefix {
-    background-color: #f4f6f5;
-    padding: 10px 12px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    border-right: 1px solid #d5dad6;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-}
-input[type="tel"] {
-    outline: none;
-}
-/* Input field inside wrapper */
-.phone-input-wrapper input {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    padding: 10px 12px;
-    font-size: 14px;
-    width: 100%;
-    background: transparent;
-}
+ .phone-input-wrapper:focus-within {
+   border-color: #005a43;
+   box-shadow: 0 0 0 2px rgba(0, 90, 67, 0.15);
+ }
+
+ /* India Flag & +91 Fixed Box */
+ .country-prefix {
+   background-color: #f4f6f5;
+   padding: 10px 12px;
+   font-size: 14px;
+   font-weight: 600;
+   color: #333;
+   border-right: 1px solid #d5dad6;
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   white-space: nowrap;
+ }
+
+ input[type="tel"] {
+   outline: none;
+ }
+
+ /* Input field inside wrapper */
+ .phone-input-wrapper input {
+   border: none !important;
+   outline: none !important;
+   box-shadow: none !important;
+   padding: 10px 12px;
+   font-size: 14px;
+   width: 100%;
+   background: transparent;
+ }
+
  .hero {
    position: relative;
    isolation: isolate;
@@ -620,14 +623,19 @@ input[type="tel"] {
    margin-bottom: 50px;
  }
 
- .symptom {
-   background: var(--white);
-   border: 1px solid #e0ebe6;
-   border-radius: 16px;
-   padding: 18px 16px;
-   text-align: center;
-   box-shadow: 0 8px 24px rgba(0, 70, 50, .06);
- }
+.symptom {
+    background: var(--white);
+    border: 1px solid #e0ebe6;
+    border-radius: 16px;
+    padding: 18px 16px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 70, 50, .06);
+    transition: 0.8s;
+}
+.symptom:hover {
+    background-color: #f4f9f8;
+    margin-top: -8px;
+}
 
  section.intolerable {
    text-align: center;
@@ -665,16 +673,20 @@ input[type="tel"] {
    gap: 10px;
  }
 
- .risk-list div {
-   background: var(--bg);
-   border: 1px solid #dae8e2;
-   padding: 3px 15px;
-   border-radius: 8px;
-   font-weight: 600;
-   font-size: 13px;
-   text-align: justify;
- }
+.risk-list div:hover {
+    margin-left: -5px;
+}
 
+.risk-list div {
+    background: var(--bg);
+    border: 1px solid #dae8e2;
+    padding: 3px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: justify;
+    transition: 0.6s;
+}
  .risk-list div:before {
    content: "•";
    color: var(--green);
@@ -791,7 +803,7 @@ input[type="tel"] {
    justify-content: center;
    z-index: 2;
  }
- 
+
  .btn-primary::after {
    content: "";
    position: absolute;
@@ -803,7 +815,7 @@ input[type="tel"] {
    transition: height 0.4s ease-in-out;
    z-index: -1;
  }
- 
+
  .btn-primary:hover::after {
    height: 100%;
  }
@@ -901,7 +913,6 @@ input[type="tel"] {
    width: 37px;
    height: auto;
    object-fit: inherit;
-   border-radius: 0;
    position: absolute;
    right: 10px;
    margin-top: 10px;
@@ -1160,6 +1171,10 @@ input[type="tel"] {
    margin-top: 38px;
  }
 
+ .hospital:hover {
+   margin-top: -7px;
+ }
+
  .hospital {
    background: var(--white);
    color: var(--black);
@@ -1167,14 +1182,31 @@ input[type="tel"] {
    overflow: hidden;
    padding: 10px;
    position: relative;
+   cursor: pointer;
+   transition: 1s;
+ }
+
+ .mainimghospital {
+   width: 100%;
+   overflow: hidden;
+   border-radius: 8px;
+ }
+
+ .hospital:hover .mainimghospital img {
+   transform: scale(1.1);
+   transition: transform 0.4s ease-in-out;
+ }
+
+ .mainimghospital img {
+   transition: transform 0.4s ease-in-out;
  }
 
  .hospital img {
    width: 100%;
    height: 150px;
    object-fit: cover;
-   border-radius: 8px;
    display: block;
+   transition: 0.7s;
  }
 
  .hospital h3 {
@@ -1314,11 +1346,22 @@ input[type="tel"] {
 
  .doctor img {
    width: 100%;
-   height: 245px;
+   height: 255px;
    object-fit: cover;
-   object-position: center top;
-   border-radius: 12px;
-   background: #a4a7ad;
+   object-position: center;
+   transition: 0.7s;
+ }
+
+ .drimgbox {
+   width: 100%;
+   height: 255px;
+   overflow: hidden;
+   border-radius: 8px;
+ }
+
+ .doctor:hover .drimgbox img {
+   transform: scale(1.1);
+   transition: transform 0.4s ease-in-out;
  }
 
  .doctor h3 {
@@ -1704,26 +1747,29 @@ input[type="tel"] {
    margin-top: 35px;
  }
 
- .gallery-grid img {
+ .gallery-img img {
    width: 100%;
    height: 300px;
    object-fit: cover;
+   transition: 1s;
+ }
+
+ .gallery-img {
+   width: 100%;
+   height: 300px;
    border-radius: 13px;
+   overflow: hidden;
  }
 
- .gallery-grid img:nth-child(2) {
-   height: 300px;
- }
-
- .gallery-grid img:nth-child(5) {
-   height: 300px;
+ .gallery-img:hover img {
+   transform: scale(1.1);
+   transition: transform 0.6s ease-in-out;
  }
 
  .faq {
    background: var(--cream);
  }
 
- /****faq*******/
  .faq-list {
    display: flex;
    flex-direction: column;
@@ -2627,9 +2673,11 @@ input[type="tel"] {
    .badge {
      padding: 6px 15px 6px 55px;
    }
-.popup-overlay { 
-    top: 0px; 
-}
+
+   .popup-overlay {
+     top: 0px;
+   }
+
    .features-container {
      margin: auto;
    }
