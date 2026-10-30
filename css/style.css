@@ -1268,10 +1268,8 @@
 
  .hospital-meta {
    display: flex;
-   justify-content: flex-start;
-   border-top: 1px solid #e7ecea;
-   margin-top: 12px;
-   padding-top: 10px;
+   justify-content: flex-start; 
+   margin-top: 12px; 
    font-size: 12px;
    gap: 10px;
  }
