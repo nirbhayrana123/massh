@@ -89,3 +89,54 @@ window.addEventListener('scroll', function () {
     } 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;  
 });
+
+ 
+document.addEventListener("DOMContentLoaded", function () {
+ 
+  const lenis = new Lenis({
+    duration: 1.2,
+    smoothWheel: true,
+    wheelMultiplier: 1,
+    touchMultiplier: 1.5
+  });
+
+ 
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+ 
+  lenis.on("scroll", function ({ scroll }) {
+
+    const section = document.querySelector(".tp-hero-bottom");
+
+    if (!section) return;
+
+    const sectionOffset = section.getBoundingClientRect().top + scroll;
+    const windowHeight = window.innerHeight;
+
+    const distance = scroll - sectionOffset + windowHeight;
+
+    if (distance > 0) {
+
+ 
+      document.querySelectorAll(".tp-hero-bottom-height img").forEach(function (img) {
+        img.style.transform =
+          "translateY(" + (distance * -0.15) + "px) scale(1.05)";
+      });
+
+ 
+      document.querySelectorAll(".tp-hero-customer-shape").forEach(function (shape) {
+        shape.style.transform =
+          "translateY(" + (distance * -0.08) + "px)";
+      });
+
+    }
+  });
+
+}); 
+ 
+

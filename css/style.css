@@ -13,6 +13,27 @@
    padding: 0;
  }
 
+
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+html.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+html.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.tp-hero-bottom-height img,
+.tp-hero-customer-shape {
+  will-change: transform;
+}
+ 
+
  html {
    scroll-behavior: smooth;
  }
@@ -299,18 +320,18 @@
    align-items: center;
  }
 
- .hero:before {
-   content: "";
-   position: absolute;
-   inset: 0;
-   z-index: -1;
-   opacity: .12;
-   background-image: url(../image/bannerbg.jpg);
-   background-size: 130%;
-   background-position: -200px 0px;
-   background-repeat: no-repeat;
- }
-
+.hero:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .12;
+    background-image: url(../image/bannerbg.jpg);
+    background-size: 130%;
+    background-position: -200px 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
  .boderr {
    border-top: 1px solid #d8d6d6;
    border-bottom: 1px solid #d8d6d6;
@@ -973,18 +994,18 @@
  }
 
 
-
- .dark-section::before {
-   content: "";
-   position: absolute;
-   inset: 0;
-   opacity: .12;
-   background-image: url(../image/advanced.png);
-   background-size: 130%;
-   background-position: -200px 0px;
-   background-repeat: no-repeat;
-   z-index: 0;
- }
+.dark-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .12;
+    background-image: url(../image/advanced.png);
+    background-size: 130%;
+    background-position: -200px 0px;
+    background-repeat: no-repeat;
+    z-index: 0;
+    background-attachment: fixed;
+}
 
  .dark-section .heading {
    color: var(--white);
@@ -1534,7 +1555,7 @@
    background-image: url(../image/mm.png);
    background-size: 20px;
    background-position: center;
-   background-repeat: no-repeat;
+   background-repeat: no-repeat; 
    top: 20px;
    left: auto;
    right: 15px;
@@ -1691,6 +1712,7 @@
    background-position: center -82px;
    background-repeat: no-repeat;
    opacity: .12;
+   background-attachment: fixed;
  }
 
  section.section.cta form.inline-form .canter {
@@ -2095,10 +2117,11 @@
    font-size: 22px;
  }
 
- .popup-overlay.active {
-   opacity: 1;
-   visibility: visible;
- }
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    display: none;
+}
 
  .popup-overlay.active .popup-box {
    transform: translateY(0);
