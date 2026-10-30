@@ -960,9 +960,11 @@
    margin-top: 10px;
  }
 
- .hospital-meta span {
-   font-weight: 700;
- }
+.hospital-meta span {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0%;
+}
 
  .hospital-meta span small {
    font-weight: 400;
@@ -1722,35 +1724,13 @@
    text-align: center;
  }
 
- .direction-wrapper img {
-   width: 20px;
-   height: 20px;
- }
 
- .deractions {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
- }
-
- .direction-wrapper h6 {
-   font-family: DM Sans;
-   font-weight: 500;
-   font-size: 12px;
-   line-height: 100%;
-   letter-spacing: 0%;
-   color: rgba(0, 136, 255, 1);
- }
-
- .direction-icon {
-   transform: rotate(45deg);
- }
 
  section.section.cta h2.heading {
    font-weight: 400;
  }
 
- section.section.cta::after {
+ section.section.cta::before {
    content: "";
    position: absolute;
    inset: 0;
@@ -2503,6 +2483,73 @@
  }
 
  /* ======thankyou-card ======== */
+
+
+ 
+.directions-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #EAEAEA;
+}  
+ 
+.mass-info .hospital-title { 
+    font-size: 20px; 
+    color: #0B1E36; 
+    margin: 0 0 6px 0; 
+}
+
+.mass-info .location-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(22, 135, 114, 1);
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+.mass-info img {
+    width: 16px;
+    height: 18px;
+}
+.mass-info .location-icon {
+    font-size: 15px;
+    color: #005a43;
+}
+ 
+.direction-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+    cursor: pointer;
+}
+.hospital-meta p {
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(56, 56, 56, 1);
+    line-height: 1.2em;
+}
+.direction-wrapper .direction-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.direction-wrapper span {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: #0088FF;  
+}
+
+
+
+
 
  @media (max-width: 1376px) {
    .container {
