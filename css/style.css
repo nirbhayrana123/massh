@@ -1243,10 +1243,8 @@ html.lenis.lenis-stopped {
 
  .hospital-meta {
    display: flex;
-   justify-content: flex-start;
-   border-top: 1px solid #e7ecea;
-   margin-top: 12px;
-   padding-top: 10px;
+   justify-content: flex-start; 
+   margin-top: 12px; 
    font-size: 12px;
    gap: 10px;
  }
@@ -1698,27 +1696,65 @@ html.lenis.lenis-stopped {
    background-color: rgba(22, 135, 114, 1);
    text-align: center;
  }
-.direction-wrapper img {
-    width: 20px;
-    height: 20px;
-}
-.deractions {
+/* Container Layout */
+.directions-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #e7ecea;  
 }
-.direction-wrapper h6 {
-    font-family: DM Sans;
+ 
+.mass-info .hospital-title {
+    font-size: 20px;
+    margin: 0 0 6px 0;
+}
+.mass-info img {
+    width: 16px;
+    height: 20px;
+}
+.mass-info .location-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #005a43;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.mass-info .location-icon {
+    font-size: 15px;
+    color: #005a43;
+}
+ 
+.direction-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-decoration: none;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.direction-wrapper .direction-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.direction-wrapper span {
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     font-size: 12px;
     line-height: 100%;
-    letter-spacing: 0%;
-    color: rgba(0, 136, 255, 1);
+    color: #0088FF; /* Bright Blue direction text color */
 }
 
-.direction-icon {
-  transform: rotate(45deg); /* Icon ko image ke angle ke mutabiq set karne ke liye */
-}
+
+
  section.section.cta h2.heading {
    font-weight: 400;
  }
