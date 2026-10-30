@@ -1698,7 +1698,27 @@ html.lenis.lenis-stopped {
    background-color: rgba(22, 135, 114, 1);
    text-align: center;
  }
+.direction-wrapper img {
+    width: 20px;
+    height: 20px;
+}
+.deractions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.direction-wrapper h6 {
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(0, 136, 255, 1);
+}
 
+.direction-icon {
+  transform: rotate(45deg); /* Icon ko image ke angle ke mutabiq set karne ke liye */
+}
  section.section.cta h2.heading {
    font-weight: 400;
  }
