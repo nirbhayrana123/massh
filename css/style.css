@@ -15,24 +15,24 @@
 
 
 
-html.lenis,
-html.lenis body {
-  height: auto;
-}
+ html.lenis,
+ html.lenis body {
+   height: auto;
+ }
 
-html.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
+ html.lenis.lenis-smooth {
+   scroll-behavior: auto !important;
+ }
 
-html.lenis.lenis-stopped {
-  overflow: hidden;
-}
+ html.lenis.lenis-stopped {
+   overflow: hidden;
+ }
 
-.tp-hero-bottom-height img,
-.tp-hero-customer-shape {
-  will-change: transform;
-}
- 
+ .tp-hero-bottom-height img,
+ .tp-hero-customer-shape {
+   will-change: transform;
+ }
+
 
  html {
    scroll-behavior: smooth;
@@ -281,24 +281,25 @@ html.lenis.lenis-stopped {
    border-color: #005a43;
    box-shadow: 0 0 0 2px rgba(0, 90, 67, 0.15);
  }
-.country-prefix {
-    background-color: #f4f6f5;
-    padding: 10px 12px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    border-right: 1px solid #d5dad6;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-    height: 100%;
-}
+
+ .country-prefix {
+   background-color: #f4f6f5;
+   padding: 10px 12px;
+   font-size: 14px;
+   font-weight: 600;
+   color: #333;
+   border-right: 1px solid #d5dad6;
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   white-space: nowrap;
+   height: 100%;
+ }
 
  input[type="tel"] {
    outline: none;
  }
- 
+
  .phone-input-wrapper input {
    border: none !important;
    outline: none !important;
@@ -320,18 +321,19 @@ html.lenis.lenis-stopped {
    align-items: center;
  }
 
-.hero:before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    opacity: .12;
-    background-image: url(../image/bannerbg.jpg);
-    background-size: 130%;
-    background-position: -200px 0px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+ .hero:before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   z-index: -1;
+   opacity: .12;
+   background-image: url(../image/bannerbg.jpg);
+   background-size: 130%;
+   background-position: -200px 0px;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+ }
+
  .boderr {
    border-top: 1px solid #d8d6d6;
    border-bottom: 1px solid #d8d6d6;
@@ -642,13 +644,22 @@ html.lenis.lenis-stopped {
    padding: 18px 16px;
    text-align: center;
    box-shadow: 0 8px 24px rgba(0, 70, 50, .06);
-   transition: 0.8s;
+   transition: all 0.3s ease-in-out; 
+   overflow: hidden;
  }
-
- .symptom:hover {
-   background-color: #f4f9f8;
-   margin-top: -8px;
- }
+.symptom:hover::after {
+    height: 100%;
+}
+.symptom::after {
+    content: "";
+    background-color: var(--green);
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    inset: 0;
+    transition: 0.6s;
+    z-index: -1;
+}
 
  section.intolerable {
    text-align: center;
@@ -666,8 +677,11 @@ html.lenis.lenis-stopped {
    font-size: 18px;
    text-align: center;
    line-height: 135%;
+     transition: 0.6s;
  }
-
+.symptom:hover h3 {
+    color: var(--white);
+}
  .center-btn {
    text-align: center;
    margin-top: 28px;
@@ -686,10 +700,6 @@ html.lenis.lenis-stopped {
    gap: 10px;
  }
 
- .risk-list div:hover {
-   margin-left: -5px;
- }
-
  .risk-list div {
    background: var(--bg);
    border: 1px solid #dae8e2;
@@ -698,10 +708,23 @@ html.lenis.lenis-stopped {
    font-weight: 600;
    font-size: 13px;
    text-align: justify;
-   transition: 0.6s;
+   overflow: hidden;
+ }
+.risk-list div::after {
+    content: "";
+    background-color: #d3f3ed;
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    inset: 0;
+    transition: 0.6s;
+    z-index: -1;
+}
+ .risk-list div:hover::after {
+   height: 100%;
  }
 
- .risk-list div:before {
+  .risk-list div:before {
    content: "•";
    color: var(--green);
    font-size: 22px;
@@ -818,9 +841,11 @@ html.lenis.lenis-stopped {
  .btn-primary:hover {
    transform: translateY(-2px);
  }
+
  .leftsidebt.show a.btn-primary:hover {
    transform: rotate(-91deg);
  }
+
  .btn-primary::after {
    content: "";
    position: absolute;
@@ -994,18 +1019,18 @@ html.lenis.lenis-stopped {
  }
 
 
-.dark-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: .12;
-    background-image: url(../image/advanced.png);
-    background-size: 130%;
-    background-position: -200px 0px;
-    background-repeat: no-repeat;
-    z-index: 0;
-    background-attachment: fixed;
-}
+ .dark-section::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   opacity: .12;
+   background-image: url(../image/advanced.png);
+   background-size: 130%;
+   background-position: -200px 0px;
+   background-repeat: no-repeat;
+   z-index: 0;
+   background-attachment: fixed;
+ }
 
  .dark-section .heading {
    color: var(--white);
@@ -1555,7 +1580,7 @@ html.lenis.lenis-stopped {
    background-image: url(../image/mm.png);
    background-size: 20px;
    background-position: center;
-   background-repeat: no-repeat; 
+   background-repeat: no-repeat;
    top: 20px;
    left: auto;
    right: 15px;
@@ -1698,27 +1723,31 @@ html.lenis.lenis-stopped {
    background-color: rgba(22, 135, 114, 1);
    text-align: center;
  }
-.direction-wrapper img {
-    width: 20px;
-    height: 20px;
-}
-.deractions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.direction-wrapper h6 {
-    font-family: DM Sans;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: rgba(0, 136, 255, 1);
-}
 
-.direction-icon {
-  transform: rotate(45deg); /* Icon ko image ke angle ke mutabiq set karne ke liye */
-}
+ .direction-wrapper img {
+   width: 20px;
+   height: 20px;
+ }
+
+ .deractions {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+
+ .direction-wrapper h6 {
+   font-family: DM Sans;
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 100%;
+   letter-spacing: 0%;
+   color: rgba(0, 136, 255, 1);
+ }
+
+ .direction-icon {
+   transform: rotate(45deg);
+ }
+
  section.section.cta h2.heading {
    font-weight: 400;
  }
@@ -2137,11 +2166,11 @@ html.lenis.lenis-stopped {
    font-size: 22px;
  }
 
-.popup-overlay.active {
-    opacity: 1;
-    visibility: visible;
-    display: none;
-}
+ .popup-overlay.active {
+   opacity: 1;
+   visibility: visible;
+   display: none;
+ }
 
  .popup-overlay.active .popup-box {
    transform: translateY(0);
@@ -2981,9 +3010,11 @@ html.lenis.lenis-stopped {
    .hospital img {
      height: 120px;
    }
-.thankyou-card { 
-    max-width: 90%; 
-}
+
+   .thankyou-card {
+     max-width: 90%;
+   }
+
    .hospital h3 {
      font-size: 17px;
    }
@@ -3261,16 +3292,18 @@ html.lenis.lenis-stopped {
      font-size: 25px;
    }
 
-.thankyou-card { 
-    padding: 20px; 
-}
-.details-box { 
-    padding: 13px; 
-}
-.action-buttons { 
-    gap: 10px; 
-    flex-direction: column;
-}
+   .thankyou-card {
+     padding: 20px;
+   }
+
+   .details-box {
+     padding: 13px;
+   }
+
+   .action-buttons {
+     gap: 10px;
+     flex-direction: column;
+   }
  }
 
  @media (max-width: 376px) {
