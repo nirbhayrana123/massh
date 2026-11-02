@@ -6,7 +6,10 @@
    --gry: rgba(244, 249, 248, 1);
    --cream: #fffaf4;
  }
-  iframe#nl-badge-frame { transform: scale(0)!important;}
+
+ iframe#nl-badge-frame {
+   transform: scale(0) !important;
+ }
 
  * {
    box-sizing: border-box;
@@ -638,17 +641,17 @@
    margin-bottom: 50px;
  }
 
-.symptom {
-    position: relative;
-    background: var(--white);
-    border: 1px solid #e0ebe6;
-    border-radius: 16px;
-    padding: 18px 16px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 70, 50, .06);
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
-}
+ .symptom {
+   position: relative;
+   background: var(--white);
+   border: 1px solid #e0ebe6;
+   border-radius: 16px;
+   padding: 18px 16px;
+   text-align: center;
+   box-shadow: 0 8px 24px rgba(0, 70, 50, .06);
+   transition: all 0.3s ease-in-out;
+   overflow: hidden;
+ }
 
  .symptom:hover::after {
    height: 100%;
@@ -669,24 +672,24 @@
    text-align: center;
  }
 
-.symptom-icon {
-    width: 120px;
-    margin: 0 auto 18px;
-    position: relative;
-    z-index: 2;
-}
+ .symptom-icon {
+   width: 120px;
+   margin: 0 auto 18px;
+   position: relative;
+   z-index: 2;
+ }
 
  .symptom h3 {
-    color: var(--green);
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 18px;
-    text-align: center;
-    line-height: 135%;
-    transition: 0.6s;
-    position: relative;
-    z-index: 2;
-}
+   color: var(--green);
+   font-family: Montserrat;
+   font-weight: 600;
+   font-size: 18px;
+   text-align: center;
+   line-height: 135%;
+   transition: 0.6s;
+   position: relative;
+   z-index: 2;
+ }
 
  .symptom:hover h3 {
    color: var(--white);
@@ -722,11 +725,11 @@
    transition: 0.7s;
  }
 
- .risk-list div:hover { 
-   background-color: #d3f3ed; 
+ .risk-list div:hover {
+   background-color: #d3f3ed;
  }
- 
- 
+
+
  .risk-list div:before {
    content: "•";
    color: var(--green);
@@ -1723,9 +1726,7 @@
    background-color: rgba(22, 135, 114, 1);
    text-align: center;
  }
-
-
-
+ 
  section.section.cta h2.heading {
    font-weight: 400;
  }
@@ -1885,8 +1886,7 @@
 
  a.btn-primary.gold:hover {
    background-color: #fff;
- }
-
+ } 
 
  .faq-item .icon {
    font-size: 16px;
@@ -1952,14 +1952,15 @@
    margin: 0 auto;
  }
 
-.footer-links a:hover {
-    color: #ffa700;
-}
-.footer-links a {
-    padding-left: 20px;
-    font-size: 14px;
-    transition: 0.5s;
-}
+ .footer-links a:hover {
+   color: #ffa700;
+ }
+
+ .footer-links a {
+   padding-left: 20px;
+   font-size: 14px;
+   transition: 0.5s;
+ }
 
  footer::before {
    content: "";
@@ -2034,13 +2035,15 @@
    margin: 10px 0;
  }
 
-.socials a:hover {
-    transform: scale(1.2);
-}
-.socials a {
-    width: 35px;
-    transition: 0.5s;
-}
+ .socials a:hover {
+   transform: scale(1.2);
+ }
+
+ .socials a {
+   width: 35px;
+   transition: 0.5s;
+ }
+
  .copyright {
    border-top: 1px solid rgba(255, 255, 255, 0.22);
    padding-top: 16px;
@@ -2211,7 +2214,7 @@
 
  .bm {
    width: 1px;
-   background-color: rgba(137, 145, 154, 1);
+   background-color: rgb(137, 145, 154);
  }
 
  .popup-left h3 {
@@ -2280,8 +2283,7 @@
    font-size: 11px;
    color: #666;
  }
-
- /* Right Side Form Styling */
+ 
  .popup-right .input-group {
    margin-bottom: 15px;
  }
@@ -2340,8 +2342,7 @@
    padding-right: 5px;
  }
 
- /* ======thankyou-card ======== */
-
+ /* ======thankyou-card ======== */ 
  .thankyou-card {
    background-color: #ffffff;
    width: 100%;
@@ -2419,8 +2420,7 @@
    align-items: center;
    justify-content: center;
    gap: 5px;
- }
-
+ } 
 
  .step-list {
    list-style: none;
@@ -2440,9 +2440,7 @@
 
  .action-buttons a.btn-primary {
    gap: 12px;
- }
-
-
+ } 
 
  @keyframes pulseRing {
    0% {
@@ -2540,19 +2538,19 @@
    line-height: 1.2em;
  }
 
-.direction-wrapper .direction-icon {
-    width: 19px;
-    height: 19px;
-    object-fit: contain;
-}
+ .direction-wrapper .direction-icon {
+   width: 19px;
+   height: 19px;
+   object-fit: contain;
+ }
 
-.direction-wrapper span {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 100%;
-    color: #0088FF;
-}
+ .direction-wrapper span {
+   font-family: 'DM Sans', sans-serif;
+   font-weight: 500;
+   font-size: 10px;
+   line-height: 100%;
+   color: #0088FF;
+ }
 
  @media (max-width: 1376px) {
    .container {
@@ -2617,9 +2615,7 @@
    .container {
      max-width: 1270px;
      margin: 0 auto;
-   }
-
-
+   } 
  }
 
  @media(max-width:1050px) {
@@ -2662,8 +2658,7 @@
 
    .hero {
      height: auto;
-   }
-
+   } 
  }
 
  @media(max-width:991px) {
@@ -2737,11 +2732,7 @@
 
    section.section.cta form.inline-form {
      width: 100%;
-   }
-
-
-
-
+   } 
  }
 
  @media (max-width: 767px) {
@@ -2768,6 +2759,10 @@
    .popup-box {
      max-height: 90vh;
      overflow-y: auto;
+   }
+
+   .feature-item {
+     padding: 0;
    }
 
    location {
@@ -2955,9 +2950,6 @@
      top: 0px;
    }
 
-   .features-container {
-     margin: auto;
-   }
 
    .hero:before {
      background-size: cover;
@@ -3011,13 +3003,15 @@
    .gallery-img {
      height: 110px;
    }
-.videobox span { 
-    width: 40px;
-    min-height: 40px;
-    min-width: 40px;
-    height: 40px; 
-    font-size: 14px; 
-}
+
+   .videobox span {
+     width: 40px;
+     min-height: 40px;
+     min-width: 40px;
+     height: 40px;
+     font-size: 14px;
+   }
+
    .close-popup {
      top: -18px;
      right: 5px;
@@ -3039,14 +3033,15 @@
      font-size: 47px;
    }
 
-
    .form-card {
      padding: 21px;
    }
 
    .features-container {
-     grid-template-columns: repeat(2, 1fr);
+     grid-template-columns: repeat(3, 1fr);
      gap: 0px;
+     margin: auto;
+     padding: 15px;
    }
 
    .intro,
@@ -3187,6 +3182,8 @@
      display: none;
    }
 
+ 
+   
  }
 
 
@@ -3369,9 +3366,10 @@
      gap: 10px;
      flex-direction: column;
    }
-   .doctor .button-row a.btn-primary { 
-    margin-top: 10px;
-}
+
+   .doctor .button-row a.btn-primary {
+     margin-top: 10px;
+   }
  }
 
  @media (max-width: 376px) {
@@ -3433,5 +3431,8 @@
      font-size: 13px;
    }
 
+   .feature-item p {
+     font-size: 11px;
+   }
 
  }
