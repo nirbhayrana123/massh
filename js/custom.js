@@ -148,7 +148,7 @@ $(document).ready(function () {
 
             var $slider = $(this);
 
-            if ($(window).width() <= 767) {
+            if ($(window).width() <= 580) {
 
                 if (!$slider.hasClass("owl-loaded")) {
                     $slider.owlCarousel({
