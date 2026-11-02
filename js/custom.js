@@ -154,8 +154,12 @@ $(document).ready(function () {
                     $slider.owlCarousel({
                         loop: true,
                         margin: 20,
-                        nav: false,
+                       nav: true,           
                         dots: true,
+                        navText: [
+                        '<i class="fa-solid fa-chevron-left"></i>', 
+                        '<i class="fa-solid fa-chevron-right"></i>'
+                        ],
                         items: 1
                     });
                 }

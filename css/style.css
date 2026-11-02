@@ -2514,7 +2514,7 @@
  }
 
  .mass-info img {
-   width: 16px!important;
+   width: 16px !important;
    height: 18px;
  }
 
@@ -2736,14 +2736,17 @@
  }
 
  @media (max-width: 767px) {
+
+
    .owl-theme .owl-dots {
      margin-top: 15px;
      text-align: center;
    }
 
-   .no-js .owl-carousel, .owl-carousel.owl-loaded {
-    display: block!important;
-}
+   .no-js .owl-carousel,
+   .owl-carousel.owl-loaded {
+     display: block !important;
+   }
 
    .owl-theme .owl-dots .owl-dot span {
      width: 8px;
@@ -2758,6 +2761,54 @@
      width: 20px;
      border-radius: 10px;
    }
+
+   .owl-carousel {
+     position: relative !important;
+   }
+
+   .owl-carousel .owl-nav {
+     position: absolute;
+     top: 30%;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     transform: translateY(-50%);
+     pointer-events: none;
+     z-index: 10;
+     padding: 0 10px;
+   }
+
+   .owl-carousel .owl-nav button.owl-prev,
+   .owl-carousel .owl-nav button.owl-next {
+     pointer-events: auto;
+     width: 42px;
+     height: 42px;
+     border: 2px solid rgba(255, 255, 255, 0.8) !important;
+     border-radius: 50% !important;
+     background-color: rgba(0, 0, 0, 0.4) !important;
+     color: #ffffff !important;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 16px !important;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   }
+
+   .owl-carousel .owl-nav button.owl-prev:hover,
+   .owl-carousel .owl-nav button.owl-next:hover {
+     background-color: #005a43 !important;
+     border-color: #005a43 !important;
+     color: #ffffff !important;
+   }
+
+
+
+
+
+
+
+
 
    .menu-toggle {
      display: block;
