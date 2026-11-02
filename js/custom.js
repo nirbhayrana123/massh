@@ -1,11 +1,11 @@
 
 
- 
- 
+
+
 $(".faq-item").click(function () {
 
     $(".faq-content-inner").slideUp(500);
-    $(".faq-item").removeClass("active"); 
+    $(".faq-item").removeClass("active");
 
     var answer = $(this).find(".faq-content-inner");
     if (!answer.is(":visible")) {
@@ -13,43 +13,43 @@ $(".faq-item").click(function () {
         $(this).addClass("active");
     }
 });
- 
+
 
 $(window).scroll(function () {
     var scrollHeight = $(document).height() - $(window).height();
-    var scrollPercent = ($(window).scrollTop() / scrollHeight) * 100; 
+    var scrollPercent = ($(window).scrollTop() / scrollHeight) * 100;
     if (scrollPercent >= 4) {
         $(".leftsidebt").addClass("show");
     } else {
-        $(".leftsidebt").removeClass("show");  
+        $(".leftsidebt").removeClass("show");
     }
 });
 
- 
+
 const modal = document.getElementById('videoModal');
 const player = document.getElementById('videoPlayer');
 const closeBtn = document.querySelector('.close-btn');
-const videoBoxes = document.querySelectorAll('.videobox'); 
- 
+const videoBoxes = document.querySelectorAll('.videobox');
+
 videoBoxes.forEach(box => {
-    box.addEventListener('click', function () { 
-        const videoId = this.getAttribute('data-video');  
-        player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`; 
+    box.addEventListener('click', function () {
+        const videoId = this.getAttribute('data-video');
+        player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
         modal.style.display = 'flex';
     });
 });
 
- 
-closeBtn.addEventListener('click', closeModal); 
+
+closeBtn.addEventListener('click', closeModal);
 modal.addEventListener('click', function (e) {
     if (e.target === modal) {
         closeModal();
     }
 });
 
- function closeModal() {
+function closeModal() {
     modal.style.display = 'none';
-    player.src = '';  
+    player.src = '';
 }
 
 
@@ -80,86 +80,97 @@ let lastScrollTop = 0;
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', function () {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop; 
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     if (currentScroll > lastScrollTop && currentScroll > 100) {
 
         header.classList.add('hideheader');
-    } else { 
+    } else {
         header.classList.remove('hideheader');
-    } 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;  
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
- 
+
 document.addEventListener("DOMContentLoaded", function () {
- 
-  const lenis = new Lenis({
-    duration: 1.2,
-    smoothWheel: true,
-    wheelMultiplier: 1,
-    touchMultiplier: 1.5
-  });
 
- 
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
-
- 
-  lenis.on("scroll", function ({ scroll }) {
-
-    const section = document.querySelector(".tp-hero-bottom");
-
-    if (!section) return;
-
-    const sectionOffset = section.getBoundingClientRect().top + scroll;
-    const windowHeight = window.innerHeight;
-
-    const distance = scroll - sectionOffset + windowHeight;
-
-    if (distance > 0) {
-
- 
-      document.querySelectorAll(".tp-hero-bottom-height img").forEach(function (img) {
-        img.style.transform =
-          "translateY(" + (distance * -0.15) + "px) scale(1.05)";
-      });
-
- 
-      document.querySelectorAll(".tp-hero-customer-shape").forEach(function (shape) {
-        shape.style.transform =
-          "translateY(" + (distance * -0.08) + "px)";
-      });
-
-    }
-  });
-
-}); 
- 
-
-
-$(document).ready(function(){
-    $(".doctors").owlCarousel({
-      loop: true,
-      margin: 20,
-      nav: false,          
-      dots: true,         
-      responsive:{
-          0:{
-              items: 1     
-          },
-          768:{
-              items: 2     
-          },
-          1024:{
-              items: 3,    
-              dots: false,
-              mouseDrag: false
-          }
-      }
+    const lenis = new Lenis({
+        duration: 1.2,
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 1.5
     });
-  });
 
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+
+    lenis.on("scroll", function ({ scroll }) {
+
+        const section = document.querySelector(".tp-hero-bottom");
+
+        if (!section) return;
+
+        const sectionOffset = section.getBoundingClientRect().top + scroll;
+        const windowHeight = window.innerHeight;
+
+        const distance = scroll - sectionOffset + windowHeight;
+
+        if (distance > 0) {
+
+
+            document.querySelectorAll(".tp-hero-bottom-height img").forEach(function (img) {
+                img.style.transform =
+                    "translateY(" + (distance * -0.15) + "px) scale(1.05)";
+            });
+
+
+            document.querySelectorAll(".tp-hero-customer-shape").forEach(function (shape) {
+                shape.style.transform =
+                    "translateY(" + (distance * -0.08) + "px)";
+            });
+
+        }
+    });
+
+});
+
+
+
+$(document).ready(function () {
+
+    function initSliders() {
+        $(".doctors,.review-grid,.hospital-grid").each(function () {
+
+            var $slider = $(this);
+
+            if ($(window).width() <= 767) {
+
+                if (!$slider.hasClass("owl-loaded")) {
+                    $slider.owlCarousel({
+                        loop: true,
+                        margin: 20,
+                        nav: false,
+                        dots: true,
+                        items: 1
+                    });
+                }
+
+            } else {
+
+                if ($slider.hasClass("owl-loaded")) {
+                    $slider.trigger("destroy.owl.carousel");
+                }
+            }
+        });
+    }
+
+    initSliders();
+
+    $(window).on("resize", initSliders);
+
+});
