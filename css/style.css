@@ -2745,6 +2745,27 @@
  }
 
  @media (max-width: 767px) {
+
+/* Owl Carousel Dots Styling */
+.owl-theme .owl-dots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    transition: all 0.3s ease;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #005a43 !important; /* MASSH Brand Green */
+    width: 20px;
+    border-radius: 10px;
+}
+  
    .menu-toggle {
      display: block;
      width: 20px;
