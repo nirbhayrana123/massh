@@ -6,6 +6,7 @@
    --gry: rgba(244, 249, 248, 1);
    --cream: #fffaf4;
  }
+  iframe#nl-badge-frame { transform: scale(0)!important;}
 
  * {
    box-sizing: border-box;
