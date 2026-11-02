@@ -141,15 +141,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-$(document).ready(function () {
-
+$(document).ready(function () { 
     function initSliders() {
-        $(".doctors,.review-grid,.hospital-grid").each(function () {
-
-            var $slider = $(this);
-
-            if ($(window).width() <= 580) {
-
+        $(".doctors,.review-grid,.hospital-grid,.gallery-grid").each(function () { 
+            var $slider = $(this); 
+            if ($(window).width() <= 600) { 
                 if (!$slider.hasClass("owl-loaded")) {
                     $slider.owlCarousel({
                         loop: true,
@@ -158,19 +154,37 @@ $(document).ready(function () {
                         dots: true,
                         items: 1
                     });
-                }
-
-            } else {
-
+                } 
+            } else { 
                 if ($slider.hasClass("owl-loaded")) {
                     $slider.trigger("destroy.owl.carousel");
                 }
             }
         });
-    }
+ 
+        var $videoRow = $(".video-row");
+        if (!$videoRow.hasClass("owl-loaded")) {
+            $videoRow.owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false,  
+                dots: true,
+                items: 6,   
+                responsive: {
+                    0: {
+                        items: 1  
+                    },
+                    600: {
+                        items: 2  
+                    },
+                    1000: {
+                        items: 3  
+                    }
+                }
+            });
+        }
+    } 
 
-    initSliders();
-
-    $(window).on("resize", initSliders);
-
+    initSliders(); 
+    $(window).on("resize", initSliders); 
 });
