@@ -14,10 +14,10 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
     rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <link rel="stylesheet" href="css/style.css"> 
-
-
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body id="book-free">
@@ -688,155 +688,137 @@
     </section>
 
 
-    <section class="section">
-      <div class="container" data-aos="fade" data-aos-duration="600">
-        <div class="heading-lines">
-          <h2 class="heading">Our Senior Doctors</h2>
-          <img src="image/line1.png">
+   <section class="section">
+  <div class="container">
+    <div class="heading-lines">
+      <h2 class="heading">Our Senior Doctors</h2>
+      <img src="image/line1.png" alt="line">
+    </div>
+    <p class="section-lead">Consult with our board-certified surgeons with decades of collective experience in minimal access surgery.</p>
+
+    <!-- Owl Carousel Wrapper -->
+    <div class="owl-carousel owl-theme doctors">
+      
+      <!-- Doctor Card 1 -->
+      <article class="doctor item">
+        <div class="drimgbox">
+          <img src="image/ourdoctors1.png" alt="Dr Sachin Ambekar">
         </div>
-
-        <p class="section-lead">Consult with our
-          board-certified surgeons with decades of collective experience in
-          minimal access surgery.</p>
-
-        <div class="doctors">
-          <article class="doctor">
-            <div class="drimgbox">
-              <img src="image/ourdoctors1.png" alt="Dr Sachin Ambekar">
-            </div>
-            <h3>Dr. Sachin Ambekar</h3>
-            <div class="role">Director – Minimal Access Surgery & Medical Director</div>
-
-
-
-
-            <div class="boderr">
-              <div class="location">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>Gill Village, Malerkotla Road, Delhi</p>
+        <h3>Dr. Sachin Ambekar</h3>
+        <div class="role">Director – Minimal Access Surgery &amp; Medical Director</div>
+        <div class="boderr">
+          <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Gill Village, Malerkotla Road, Delhi</p>
+          </div>
+          <div class="stats">
+            <div class="stat-item">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <b>24+</b>
+                <span>Years of Experience</span>
               </div>
-              <div class="stats">
-                <div class="stat-item">
-                  <i class="fa-solid fa-award"></i>
-                  <div>
-                    <b>24+</b>
-                    <span>Years of Experience</span>
-                  </div>
-                </div>
-                <div class="stat-item">
-                  <i class="fa-solid fa-user-doctor"></i>
-                  <div>
-                    <b>16,600+</b>
-                    <span>Surgeries Performed Successfully</span>
-                  </div>
-                </div>
+            </div>
+            <div class="stat-item">
+              <i class="fa-solid fa-user-doctor"></i>
+              <div>
+                <b>16,600+</b>
+                <span>Surgeries Performed Successfully</span>
               </div>
-
-              <p class="credentials">
-                <i class="fa-solid fa-graduation-cap"></i>
-                MBBS, MD, MS (General Surgery)
-              </p>
             </div>
-            <p class="description">Dr. Sachin Ambekar is a distinguished surgeon with over 24 years of experience,
-              serving as the Director of Minimal Access Surgery...</p>
-            <div class="button-row">
-              <a class="btn-primary" href="#consult">Book Free Consultation with Dr. Sachin Ambekar</a>
-            </div>
-          </article>
-
-          <article class="doctor">
-            <div class="drimgbox">
-              <img src="image/ourdoctors2.png" alt="Dr Harpreet Sing Jolly">
-            </div>
-            <h3>Dr. Harpreet Sing Jolly</h3>
-            <div class="role">Director – Laparoscopy & Bariatric Surgery</div>
-
-
-
-
-            <div class="boderr">
-              <div class="location">
-                <i class="fa-solid fa-location-dot"></i>
-                Gill Village, Malerkotla Road, Delhi
-              </div>
-              <div class="stats">
-                <div class="stat-item">
-                  <i class="fa-solid fa-award"></i>
-                  <div>
-                    <b>30+</b>
-                    <span>Years of Experience</span>
-                  </div>
-                </div>
-                <div class="stat-item">
-                  <i class="fa-solid fa-user-doctor"></i>
-                  <div>
-                    <b>20,000+</b>
-                    <span>Surgeries Performed Successfully</span>
-                  </div>
-                </div>
-              </div>
-
-              <p class="credentials">
-                <i class="fa-solid fa-graduation-cap"></i>
-                MBBS, MD, DNB, FMAS, SAGES Member
-              </p>
-            </div>
-            <p class="description">Dr. jolly is a highly qualified surgeon with a deep understanding of the importance
-              of patient care, combined with...</p>
-            <div class="button-row">
-              <a class="btn-primary" href="#consult">Book Free Consultation with Dr. Harpreet Sing Jolly</a>
-            </div>
-          </article>
-
-          <article class="doctor">
-            <div class="drimgbox">
-              <img src="image/ourdoctors3.png" alt="Dr Amit Kumar">
-            </div>
-            <h3>Dr. Amit Kumar</h3>
-            <div class="role">Head of Urology & Uro-Oncology</div>
-
-
-
-
-            <div class="boderr">
-              <div class="location">
-                <i class="fa-solid fa-location-dot"></i>
-                Sector 34, Noida
-              </div>
-              <div class="stats">
-                <div class="stat-item">
-                  <i class="fa-solid fa-award"></i>
-                  <div>
-                    <b>20+</b>
-                    <span>Years of Experience</span>
-                  </div>
-                </div>
-                <div class="stat-item">
-                  <i class="fa-solid fa-user-doctor"></i>
-                  <div>
-                    <b>10,000+</b>
-                    <span>Surgeries Performed Successfully</span>
-                  </div>
-                </div>
-              </div>
-
-              <p class="credentials">
-                <i class="fa-solid fa-graduation-cap"></i>
-                MBBS, MD, MS (General Surgery) Fellowships: FIAGES, FISCP
-              </p>
-            </div>
-
-            <p class="description">Dr. Sachin Ambekar is a distinguished surgeon with over 24 years of experience,
-              serving as the Director of Minimal Access Surgery...</p>
-            <div class="button-row">
-
-              <a class="btn-primary" href="#consult">Book Free Consultation with Dr. Amit Kumar</a>
-            </div>
-          </article>
-
+          </div>
+          <p class="credentials">
+            <i class="fa-solid fa-graduation-cap"></i>
+            MBBS, MD, MS (General Surgery)
+          </p>
         </div>
-      </div>
-    </section>
+        <p class="description">Dr. Sachin Ambekar is a distinguished surgeon with over 24 years of experience, serving as the Director of Minimal Access Surgery...</p>
+        <div class="button-row">
+          <a class="btn-primary" href="#consult">Book Free Consultation with Dr. Sachin Ambekar</a>
+        </div>
+      </article>
+
+      <!-- Doctor Card 2 -->
+      <article class="doctor item">
+        <div class="drimgbox">
+          <img src="image/ourdoctors2.png" alt="Dr Harpreet Sing Jolly">
+        </div>
+        <h3>Dr. Harpreet Sing Jolly</h3>
+        <div class="role">Director – Laparoscopy &amp; Bariatric Surgery</div>
+        <div class="boderr">
+          <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Gill Village, Malerkotla Road, Delhi</p>
+          </div>
+          <div class="stats">
+            <div class="stat-item">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <b>30+</b>
+                <span>Years of Experience</span>
+              </div>
+            </div>
+            <div class="stat-item">
+              <i class="fa-solid fa-user-doctor"></i>
+              <div>
+                <b>20,000+</b>
+                <span>Surgeries Performed Successfully</span>
+              </div>
+            </div>
+          </div>
+          <p class="credentials">
+            <i class="fa-solid fa-graduation-cap"></i>
+            MBBS, MD, DNB, FMAS, SAGES Member
+          </p>
+        </div>
+        <p class="description">Dr. jolly is a highly qualified surgeon with a deep understanding of the importance of patient care, combined with...</p>
+        <div class="button-row">
+          <a class="btn-primary" href="#consult">Book Free Consultation with Dr. Harpreet Sing Jolly</a>
+        </div>
+      </article>
+
+      <!-- Doctor Card 3 -->
+      <article class="doctor item">
+        <div class="drimgbox">
+          <img src="image/ourdoctors3.png" alt="Dr Amit Kumar">
+        </div>
+        <h3>Dr. Amit Kumar</h3>
+        <div class="role">Head of Urology &amp; Uro-Oncology</div>
+        <div class="boderr">
+          <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Sector 34, Noida</p>
+          </div>
+          <div class="stats">
+            <div class="stat-item">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <b>20+</b>
+                <span>Years of Experience</span>
+              </div>
+            </div>
+            <div class="stat-item">
+              <i class="fa-solid fa-user-doctor"></i>
+              <div>
+                <b>10,000+</b>
+                <span>Surgeries Performed Successfully</span>
+              </div>
+            </div>
+          </div>
+          <p class="credentials">
+            <i class="fa-solid fa-graduation-cap"></i>
+            MBBS, MD, MS (General Surgery) Fellowships: FIAGES, FISCP
+          </p>
+        </div>
+        <p class="description">Dr. Sachin Ambekar is a distinguished surgeon with over 24 years of experience, serving as the Director of Minimal Access Surgery...</p>
+        <div class="button-row">
+          <a class="btn-primary" href="#consult">Book Free Consultation with Dr. Amit Kumar</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
     <section class="section testimonials">
       <div class="container" data-aos="fade" data-aos-duration="600">
@@ -1152,6 +1134,9 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
   <script>
