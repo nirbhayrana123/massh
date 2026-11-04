@@ -474,6 +474,17 @@
    letter-spacing: 2px;
  }
 
+ p.alldata {
+    text-align: center;
+    font-size: 11px;
+    color: #666;
+    margin-top: 12px!important;
+}
+.alldata i.fa-solid.fa-lock {
+    color: rgba(22, 135, 114, 1);
+    padding-right: 5px;
+}
+
  .form-card {
    background: var(--cream);
    color: var(--black);
@@ -481,7 +492,7 @@
    padding: 18px;
    box-shadow: 0 25px 55px rgba(0, 35, 26, .24);
    margin-top: -62px;
-   width: 460px;
+   width: 507px;
    margin-left: auto;
  }
 
@@ -644,9 +655,16 @@
  }
 
  .dark-section .container.center-head p {
-   color: var(--white);
+   color: rgb(119 120 119);
    text-align: center;
  }
+ p.privacydataall {
+    text-align: center;
+    font-size: 11px;
+}
+p.privacydataall i.fa-solid.fa-lock {
+    padding-right: 5px;
+}
 
  .symptoms {
    display: grid;
@@ -804,11 +822,12 @@
    border: 1px solid rgba(22, 135, 114, 0.13);
  }
 
- .otp-section {
-   width: 270px;
-   margin: 15px auto;
-   text-align: left;
- }
+.otp-section {
+    width: 350px;
+    margin: 15px auto;
+    text-align: left;
+    margin-left: 290px;
+}
 
  p.confidential-text {
    color: #000000 !important;
@@ -1061,15 +1080,19 @@
 
  .inline-form {
    background: var(--cream);
-   color: var(--black);
-   border-radius: 22px;
-   padding: 24px;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr auto;
-   gap: 13px;
-   align-items: end;
-   margin: 34px auto 0;
+   padding: 20px;
+    border-radius: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 35px;
  }
+ .flexfilds {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 0px;
+}
 
  .inline-form .btn {
    height: 48px;
@@ -1265,7 +1288,7 @@
 
  .hospital img {
    width: 100%;
-   height: 150px;
+   height: auto;
    object-fit: cover;
    display: block;
    transition: 0.7s;
@@ -1414,7 +1437,7 @@
 
  .drimgbox {
    width: 100%;
-   height: 255px;
+   height: auto;
    overflow: hidden;
    border-radius: 8px;
  }
@@ -1759,13 +1782,10 @@
 
  section.section.cta form.inline-form .canter {
    margin: 18px auto;
+   text-align: center;
  }
 
- section.section.cta form.inline-form {
-   width: 60%;
-   display: flex;
-   flex-wrap: wrap;
- }
+  
 
  section.section.faq .left {
    margin-bottom: 20px;
@@ -1776,13 +1796,12 @@
    z-index: 1;
  }
 
- section.section.cta form.inline-form .field {
-   width: 32%;
- }
+  
 
- section.section.cta form.inline-form button.btn-primary {
-   margin: 18px auto;
- }
+section.section.cta form.inline-form button.btn-primary {
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
 
  .cta .heading {
    color: var(--white);
@@ -2624,6 +2643,7 @@
    .hero {
      height: 88vh;
    }
+  
 
    .flexx {
      width: 70%;
@@ -2729,7 +2749,9 @@
      grid-template-columns: 1fr;
      gap: 34px;
    }
-
+ .otp-section { 
+    margin-left: auto;
+}
    .feature-item p {
      font-size: 16px;
    }
@@ -2805,7 +2827,9 @@
      width: 100%;
      z-index: 10;
    }
-
+ .otp-section { 
+    margin-left: auto;
+}
    .no-js .owl-carousel,
    .owl-carousel.owl-loaded {
      display: block !important;
@@ -3229,7 +3253,7 @@
    }
 
    .doctor img {
-     height: 275px;
+     height: auto;
    }
 
    .review-grid {
@@ -3420,9 +3444,13 @@
 
 
    .hospital-meta {
-     justify-content: space-between;
+     justify-content: stretch;
    }
 
+   .directions-container { 
+    justify-self: start;
+    gap: 30px;
+}
    .mini-checks li {
      padding: 8px 5px;
    }
