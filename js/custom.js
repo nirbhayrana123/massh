@@ -139,24 +139,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
-
 $(document).ready(function () { 
-    function initSliders() {
-        $(".doctors,.review-grid,.hospital-grid,.gallery-grid").each(function () { 
+    function initSliders() {  
+        $(".doctors, .review-grid, .hospital-grid, .gallery-grid, .video-row").each(function () { 
             var $slider = $(this); 
+            
             if ($(window).width() <= 600) { 
                 if (!$slider.hasClass("owl-loaded")) {
+                    
+                     
+                    var itemsCount = $slider.hasClass("video-row") ? 2 : 1;
+
                     $slider.owlCarousel({
                         loop: true,
-                        margin: 20,
-                       nav: true,           
+                        margin: 15,
+                        nav: true,
                         dots: true,
-                        navText: [
-                        '<i class="fa-solid fa-chevron-left"></i>', 
-                        '<i class="fa-solid fa-chevron-right"></i>'
-                        ],
-                        items: 1
+                        items: itemsCount 
                     });
                 } 
             } else { 
@@ -165,30 +164,45 @@ $(document).ready(function () {
                 }
             }
         });
- 
-        var $videoRow = $(".video-row");
-        if (!$videoRow.hasClass("owl-loaded")) {
-            $videoRow.owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: false,  
-                dots: true,
-                items: 6,   
-                responsive: {
-                    0: {
-                        items: 1  
-                    },
-                    600: {
-                        items: 2  
-                    },
-                    1000: {
-                        items: 3  
-                    }
-                }
-            });
-        }
     } 
 
     initSliders(); 
     $(window).on("resize", initSliders); 
+});
+
+
+
+
+$('.locations .location').on('click', function(e) {
+  e.preventDefault();
+  
+  // 1. Smooth scroll to hospital section
+  $('html, body').animate({
+    scrollTop: $('#hospitals').offset().top - 80
+  }, 500);
+
+  // 2. Get target slide index from data-slide attribute
+  var slideIndex = $(this).attr('data-slide'); 
+  
+  // 3. Trigger owl carousel to jump to that slide
+  $('.owl-carousel').trigger('to.owl.carousel', [slideIndex, 300]);
+});
+
+
+
+$(window).on('scroll', function() {
+  // Jab page 300px niche scroll ho jaye
+  if ($(this).scrollTop() > 300) {
+    $('#backToTop').addClass('show');
+  } else {
+    $('#backToTop').removeClass('show');
+  }
+});
+
+// Arrow button par click karne par top par jana
+$('#backToTop').on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({
+    scrollTop: 0
+  }, 600); // 600ms (smooth scrolling speed)
 });
