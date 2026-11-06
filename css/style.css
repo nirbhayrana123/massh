@@ -16,7 +16,7 @@
    margin: 0;
    padding: 0;
  }
- 
+
 
  html.lenis,
  html.lenis body {
@@ -345,15 +345,15 @@
  }
 
  .locations a.location:before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background-image: url(../image/loc.png);
-    background-size: 12px;
-    background-position: 10px;
-    background-repeat: no-repeat;
-}
+   content: "";
+   position: absolute;
+   inset: 0;
+   z-index: -1;
+   background-image: url(../image/loc.png);
+   background-size: 12px;
+   background-position: 20px;
+   background-repeat: no-repeat;
+ }
 
  .hero-wrap {
    display: grid;
@@ -405,17 +405,17 @@
    margin: 20px 0;
  }
 
- 
- 
-.locations a.location {
-   border: 1px solid var(--white);
-   padding: 8px 20px 8px 25px;  
-   text-decoration: none;  
-   color: inherit;        
-   display: inline-block;
-}
 
- 
+
+ .locations a.location {
+   border: 1px solid var(--white);
+   padding: 8px 20px 8px 40px;
+   text-decoration: none;
+   color: inherit;
+   display: inline-block;
+ }
+
+
 
 
 
@@ -474,15 +474,16 @@
  }
 
  p.alldata {
-    text-align: center;
-    font-size: 11px;
-    color: #666;
-    margin-top: 12px!important;
-}
-.alldata i.fa-solid.fa-lock {
-    color: rgba(22, 135, 114, 1);
-    padding-right: 5px;
-}
+   text-align: center;
+   font-size: 11px;
+   color: #666;
+   margin-top: 12px !important;
+ }
+
+ .alldata i.fa-solid.fa-lock {
+   color: rgba(22, 135, 114, 1);
+   padding-right: 5px;
+ }
 
  .form-card {
    background: var(--cream);
@@ -502,7 +503,7 @@
  }
 
  .form-card p {
-   margin: 0 0 10px;
+   margin: 0 0 0px;
    color: var(--gry);
    font-size: 13px;
  }
@@ -657,13 +658,15 @@
    color: rgb(119 120 119);
    text-align: center;
  }
+
  p.privacydataall {
-    text-align: center;
-    font-size: 11px;
-}
-p.privacydataall i.fa-solid.fa-lock {
-    padding-right: 5px;
-}
+   text-align: center;
+   font-size: 11px;
+ }
+
+ p.privacydataall i.fa-solid.fa-lock {
+   padding-right: 5px;
+ }
 
  .symptoms {
    display: grid;
@@ -821,12 +824,12 @@ p.privacydataall i.fa-solid.fa-lock {
    border: 1px solid rgba(22, 135, 114, 0.13);
  }
 
-.otp-section {
-    width: 350px;
-    margin: 15px auto;
-    text-align: left;
-    margin-left: 290px;
-}
+ .otp-section {
+   width: 350px;
+   margin: 15px auto;
+   text-align: left;
+   margin-left: 290px;
+ }
 
  p.confidential-text {
    color: #000000 !important;
@@ -1080,18 +1083,19 @@ p.privacydataall i.fa-solid.fa-lock {
  .inline-form {
    background: var(--cream);
    padding: 20px;
-    border-radius: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-top: 35px;
+   border-radius: 20px;
+   max-width: 900px;
+   margin: 0 auto;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   margin-top: 35px;
  }
+
  .flexfilds {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 0px;
-}
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 10px;
+   margin-bottom: 0px;
+ }
 
  .inline-form .btn {
    height: 48px;
@@ -1784,7 +1788,7 @@ p.privacydataall i.fa-solid.fa-lock {
    text-align: center;
  }
 
-  
+
 
  section.section.faq .left {
    margin-bottom: 20px;
@@ -1795,12 +1799,12 @@ p.privacydataall i.fa-solid.fa-lock {
    z-index: 1;
  }
 
-  
 
-section.section.cta form.inline-form button.btn-primary {
-    margin-top: 18px;
-    margin-bottom: 10px;
-}
+
+ section.section.cta form.inline-form button.btn-primary {
+   margin-top: 18px;
+   margin-bottom: 10px;
+ }
 
  .cta .heading {
    color: var(--white);
@@ -2588,41 +2592,41 @@ section.section.cta form.inline-form button.btn-primary {
 
 
 
- 
-.back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 45px;
-  height: 45px;
-  background-color: var(--green);  
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  text-decoration: none;
-}
- 
-.back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-}
 
-.back-to-top:hover {
-  transform: translateY(-3px);
-}
-  
-.back-to-top img {
-  width: 20px;
-  height: 20px;
-}
+ .back-to-top {
+   position: fixed;
+   bottom: 30px;
+   right: 30px;
+   width: 45px;
+   height: 45px;
+   background-color: var(--green);
+   color: #fff;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 999;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease-in-out;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   text-decoration: none;
+ }
+
+ .back-to-top.show {
+   opacity: 1;
+   visibility: visible;
+ }
+
+ .back-to-top:hover {
+   transform: translateY(-3px);
+ }
+
+ .back-to-top img {
+   width: 20px;
+   height: 20px;
+ }
 
  @media (max-width: 1376px) {
    .container {
@@ -2642,7 +2646,7 @@ section.section.cta form.inline-form button.btn-primary {
    .hero {
      height: 88vh;
    }
-  
+
 
    .flexx {
      width: 70%;
@@ -2665,13 +2669,13 @@ section.section.cta form.inline-form button.btn-primary {
      font-size: 14px;
    }
 
-   .location:before {
+   .locations a.location:before {
      background-position: 10px;
    }
 
-    .locations a.location {
+   .locations a.location {
      padding: 6px 15px 5px 25px;
-  }
+   }
 
    .symptom h3 {
      font-size: 15px;
@@ -2748,9 +2752,11 @@ section.section.cta form.inline-form button.btn-primary {
      grid-template-columns: 1fr;
      gap: 34px;
    }
- .otp-section { 
-    margin-left: auto;
-}
+
+   .otp-section {
+     margin-left: auto;
+   }
+
    .feature-item p {
      font-size: 16px;
    }
@@ -2826,9 +2832,11 @@ section.section.cta form.inline-form button.btn-primary {
      width: 100%;
      z-index: 10;
    }
- .otp-section { 
-    margin-left: auto;
-}
+
+   .otp-section {
+     margin-left: auto;
+   }
+
    .no-js .owl-carousel,
    .owl-carousel.owl-loaded {
      display: block !important;
@@ -2964,10 +2972,10 @@ section.section.cta form.inline-form button.btn-primary {
    footer {
      padding-bottom: 70px;
    }
-
-   .whatsapp-float {
-     display: flex;
-   }
+    .whatsapp-float {
+        display: flex;
+        bottom: 108px;
+    }
 
    .sticky-action-bar {
      display: block;
@@ -3349,6 +3357,13 @@ section.section.cta form.inline-form button.btn-primary {
      right: -30px;
      position: relative;
    }
+ 
+.back-to-top { 
+    bottom: 58px; 
+    width: 38px;
+    height: 38px;
+    
+}
 
  }
 
@@ -3446,10 +3461,8 @@ section.section.cta form.inline-form button.btn-primary {
      justify-content: stretch;
    }
 
-   .directions-container { 
-    justify-self: start;
-    gap: 30px;
-}
+ 
+
    .mini-checks li {
      padding: 8px 5px;
    }

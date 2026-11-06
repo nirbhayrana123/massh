@@ -190,19 +190,11 @@ $('.locations .location').on('click', function(e) {
 
 
 
-$(window).on('scroll', function() {
-  // Jab page 300px niche scroll ho jaye
+$(window).on('scroll', function() { 
   if ($(this).scrollTop() > 300) {
-    $('#backToTop').addClass('show');
+    $('.back-to-top').addClass('show');
   } else {
-    $('#backToTop').removeClass('show');
+    $('.back-to-top').removeClass('show');
   }
 });
 
-// Arrow button par click karne par top par jana
-$('#backToTop').on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({
-    scrollTop: 0
-  }, 600); // 600ms (smooth scrolling speed)
-});
